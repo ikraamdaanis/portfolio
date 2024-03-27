@@ -3,8 +3,123 @@ import type { ReactNode } from "react";
 /** Section where I talk about my story. */
 export const About = () => {
   return (
-    <section className="relative mx-auto mb-[8rem] mt-0 flex w-[1280px] max-w-[85%] flex-col justify-center">
-      <Content>
+    <section className="relative mx-auto mb-[8rem] mt-40 flex w-full max-w-screen-md flex-col justify-center">
+      <h1 className="mb-8 text-4xl font-medium">Hello, I'm Ikraam Daanis</h1>
+      <h3 className="font-semibold uppercase tracking-widest text-lightPink">
+        About Me
+      </h3>
+      <p className="leading-6 text-textWhite">
+        I'm a Software Engineer from London, UK. I'm currently a working at a
+        Security company as a TypeScript developer. I've been enjoyed my career
+        so far and am looking forward to building impactful products for many
+        years to come.
+      </p>
+      <div className="my-8 columns-2 gap-4 sm:columns-3">
+        <div className="relative mb-4 h-40 overflow-hidden">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent"
+            }}
+            src="/images/todoer-1.webp"
+            alt="work"
+            className="rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+        <div className="relative mb-4 h-80 overflow-hidden sm:mb-0">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent"
+            }}
+            src="/images/ultrastore-1.webp"
+            alt="work"
+            className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+        <div className="relative h-40 overflow-hidden sm:mb-4 sm:h-80">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent"
+            }}
+            src="/images/todoer-2.webp"
+            alt="work"
+            className="rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+        <div className="relative mb-4 h-40 overflow-hidden sm:mb-0">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent"
+            }}
+            src="/images/todoer-1.webp"
+            alt="work"
+            className="rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+        <div className="relative mb-4 h-40 overflow-hidden">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent"
+            }}
+            src="/images/ultrastore-2.webp"
+            alt="work"
+            className="rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+        <div className="relative h-80 overflow-hidden">
+          <img
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              color: "transparent",
+              animationDelay: `${Math.floor(Math.random() * 1) + 1}s`
+            }}
+            src="/images/ultrastore-1.webp"
+            alt="work"
+            className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+          />
+        </div>
+      </div>
+      {/* <Content>
         Learning to code has been a tough journey. With the help of{" "}
         <a
           href="https://www.youtube.com/channel/UCSKr_gILoWAETdYpAoCxB0w/channels?view=56&shelf_id=0"
@@ -27,14 +142,14 @@ export const About = () => {
         I&#39;m a quick learner and eager to find out new things. I&#39;m never
         satisfied with mediocre. If I do something, I do it with perfection.
         Look below.
-      </Content>
+      </Content> */}
     </section>
   );
 };
 
 const Content = ({ children }: { children: ReactNode }) => {
   return (
-    <p className="text-textWhite mb-[4rem] text-[clamp(1.8rem,calc(20px+100*(40vw-100px)/1600),2.5rem)] font-medium">
+    <p className="mb-[4rem] text-[clamp(1.8rem,calc(20px+100*(40vw-100px)/1600),2.5rem)] font-medium text-textWhite">
       {children}
     </p>
   );

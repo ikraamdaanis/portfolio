@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        textWhite: "#fff",
+        textWhite: "#d4d4d4",
         lightPink: "#ffcddd",
         arrowColor: "#ffc5c0",
         offWhite: "#e6e6e6",
