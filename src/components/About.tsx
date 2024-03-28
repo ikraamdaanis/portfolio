@@ -3,122 +3,131 @@ import type { ReactNode } from "react";
 /** Section where I talk about my story. */
 export const About = () => {
   return (
-    <section className="relative mx-auto mb-[8rem] mt-40 flex w-full max-w-screen-md flex-col justify-center">
-      <h1 className="mb-8 text-4xl font-medium">Hello, I'm Ikraam Daanis</h1>
-      <h3 className="font-semibold uppercase tracking-widest text-lightPink">
-        About Me
-      </h3>
-      <p className="leading-6 text-textWhite">
-        I'm a Software Engineer from London, UK. I'm currently a working at a
-        Security company as a TypeScript developer. I've been enjoyed my career
-        so far and am looking forward to building impactful products for many
-        years to come.
-      </p>
-      <div className="my-8 columns-2 gap-4 sm:columns-3">
-        <div className="relative mb-4 h-40 overflow-hidden">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent"
-            }}
-            src="/images/todoer-1.webp"
-            alt="work"
-            className="rounded-lg object-cover object-top sm:object-center"
-          />
+    <section className="relative mx-auto mb-[8rem] mt-40 flex w-full max-w-screen-md flex-col justify-center px-4">
+      <article>
+        <h1 className="mb-8 text-balance text-2xl font-medium sm:text-3xl">
+          I'm Ikraam - a software engineer
+        </h1>
+        <h3 className="font-semibold uppercase tracking-widest text-lightPink">
+          About Me
+        </h3>
+        <p className="text-balance leading-6 text-textWhite">
+          I'm a Software Engineer from London, UK. I'm currently a working at a
+          Security company as a TypeScript developer. I've been enjoyed my
+          career so far and am looking forward to building impactful products
+          for many years to come.
+        </p>
+      </article>
+      <article className="my-8 flex flex-col gap-2">
+        <h3 className="font-semibold uppercase tracking-widest text-lightPink">
+          Some side projects over the years
+        </h3>
+        <div className="columns-1 gap-4 sm:columns-3">
+          <div className="relative mb-4 h-40 overflow-hidden">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent"
+              }}
+              src="/images/todoer-1.webp"
+              alt="work"
+              className="rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative mb-4 h-80 overflow-hidden sm:mb-0">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent"
+              }}
+              src="/images/ultrastore-1.webp"
+              alt="work"
+              className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative h-40 overflow-hidden sm:mb-4 sm:h-80">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent"
+              }}
+              src="/images/todoer-2.webp"
+              alt="work"
+              className="rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative mb-4 h-40 overflow-hidden sm:mb-0">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent"
+              }}
+              src="/images/todoer-1.webp"
+              alt="work"
+              className="rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative mb-4 h-40 overflow-hidden">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent"
+              }}
+              src="/images/ultrastore-2.webp"
+              alt="work"
+              className="rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative h-80 overflow-hidden">
+            <img
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent",
+                animationDelay: `${Math.floor(Math.random() * 1) + 1}s`
+              }}
+              src="/images/ultrastore-1.webp"
+              alt="work"
+              className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
         </div>
-        <div className="relative mb-4 h-80 overflow-hidden sm:mb-0">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent"
-            }}
-            src="/images/ultrastore-1.webp"
-            alt="work"
-            className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
-          />
-        </div>
-        <div className="relative h-40 overflow-hidden sm:mb-4 sm:h-80">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent"
-            }}
-            src="/images/todoer-2.webp"
-            alt="work"
-            className="rounded-lg object-cover object-top sm:object-center"
-          />
-        </div>
-        <div className="relative mb-4 h-40 overflow-hidden sm:mb-0">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent"
-            }}
-            src="/images/todoer-1.webp"
-            alt="work"
-            className="rounded-lg object-cover object-top sm:object-center"
-          />
-        </div>
-        <div className="relative mb-4 h-40 overflow-hidden">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent"
-            }}
-            src="/images/ultrastore-2.webp"
-            alt="work"
-            className="rounded-lg object-cover object-top sm:object-center"
-          />
-        </div>
-        <div className="relative h-80 overflow-hidden">
-          <img
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              left: 0,
-              top: 0,
-              right: 0,
-              bottom: 0,
-              color: "transparent",
-              animationDelay: `${Math.floor(Math.random() * 1) + 1}s`
-            }}
-            src="/images/ultrastore-1.webp"
-            alt="work"
-            className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
-          />
-        </div>
-      </div>
+      </article>
       {/* <Content>
         Learning to code has been a tough journey. With the help of{" "}
         <a
