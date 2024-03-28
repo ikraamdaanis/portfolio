@@ -53,23 +53,6 @@ export const About = () => {
                 bottom: 0,
                 color: "transparent"
               }}
-              src="/images/ultrastore-1.webp"
-              alt="work"
-              className="animate-moveRight rounded-sm object-cover object-top sm:object-center"
-            />
-          </div>
-          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent"
-              }}
               src="/images/form-builder.webp"
               alt="work"
               className="rounded-sm object-cover object-top sm:object-center"
