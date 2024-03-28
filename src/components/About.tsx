@@ -6,9 +6,10 @@ export const About = () => {
     <section className="relative mx-auto mb-[8rem] mt-40 flex w-full max-w-screen-md flex-col justify-center px-4">
       <article>
         <h1 className="mb-8 text-balance text-2xl font-medium sm:text-3xl">
-          I'm Ikraam - a software engineer
+          I'm Ikraam - a{" "}
+          <span className="text-brand-400">software engineer</span>
         </h1>
-        <h3 className="font-semibold uppercase tracking-widest text-lightPink">
+        <h3 className="text-brand-400 font-semibold uppercase tracking-widest">
           About Me
         </h3>
         <p className="text-balance leading-6 text-textWhite">
@@ -19,11 +20,11 @@ export const About = () => {
         </p>
       </article>
       <article className="my-8 flex flex-col gap-2">
-        <h3 className="font-semibold uppercase tracking-widest text-lightPink">
+        <h3 className="text-brand-400 font-semibold uppercase tracking-widest">
           Some side projects over the years
         </h3>
-        <div className="columns-1 gap-4 sm:columns-3">
-          <div className="relative mb-4 h-40 overflow-hidden">
+        <div className="columns-1 gap-4 sm:columns-1">
+          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
             <img
               style={{
                 position: "absolute",
@@ -35,12 +36,12 @@ export const About = () => {
                 bottom: 0,
                 color: "transparent"
               }}
-              src="/images/todoer-1.webp"
+              src="/images/discourse-1.webp"
               alt="work"
-              className="rounded-lg object-cover object-top sm:object-center"
+              className="rounded-sm object-cover object-top sm:object-center"
             />
           </div>
-          <div className="relative mb-4 h-80 overflow-hidden sm:mb-0">
+          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
             <img
               style={{
                 position: "absolute",
@@ -54,10 +55,10 @@ export const About = () => {
               }}
               src="/images/ultrastore-1.webp"
               alt="work"
-              className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+              className="animate-moveRight rounded-sm object-cover object-top sm:object-center"
             />
           </div>
-          <div className="relative h-40 overflow-hidden sm:mb-4 sm:h-80">
+          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
             <img
               style={{
                 position: "absolute",
@@ -69,12 +70,12 @@ export const About = () => {
                 bottom: 0,
                 color: "transparent"
               }}
-              src="/images/todoer-2.webp"
+              src="/images/form-builder.webp"
               alt="work"
-              className="rounded-lg object-cover object-top sm:object-center"
+              className="rounded-sm object-cover object-top sm:object-center"
             />
           </div>
-          <div className="relative mb-4 h-40 overflow-hidden sm:mb-0">
+          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
             <img
               style={{
                 position: "absolute",
@@ -88,42 +89,7 @@ export const About = () => {
               }}
               src="/images/todoer-1.webp"
               alt="work"
-              className="rounded-lg object-cover object-top sm:object-center"
-            />
-          </div>
-          <div className="relative mb-4 h-40 overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent"
-              }}
-              src="/images/ultrastore-2.webp"
-              alt="work"
-              className="rounded-lg object-cover object-top sm:object-center"
-            />
-          </div>
-          <div className="relative h-80 overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent",
-                animationDelay: `${Math.floor(Math.random() * 1) + 1}s`
-              }}
-              src="/images/ultrastore-1.webp"
-              alt="work"
-              className="animate-moveRight rounded-lg object-cover object-top sm:object-center"
+              className="rounded-sm object-cover object-top sm:object-center"
             />
           </div>
         </div>
