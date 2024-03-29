@@ -26,7 +26,14 @@ export default {
         darkBlack: "#151515",
         highlight: "#ffc5c0",
         placeholder: "#a0a0a0",
-        cursor: "#afafaf"
+        cursor: "#afafaf",
+        backgroundDark: "#18181B",
+        backgroundDark2: "#1a1a1d",
+        backgroundLight: "#fafafa",
+        backgroundLight2: "#fff",
+        borderDark: "#2b2b31",
+        borderLight: "#ececec",
+        zincHover: "#ebebeb"
       }
     }
   },

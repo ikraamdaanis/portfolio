@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+import { Image } from "./Image";
+import { Pill } from "./Pill";
+import { Sophos } from "./icons/Sophos";
 
 /** Section where I talk about my story. */
 export const About = () => {
@@ -12,11 +15,15 @@ export const About = () => {
         <h3 className="text-brand-400 font-semibold uppercase tracking-widest">
           About Me
         </h3>
-        <p className="text-balance leading-6 text-textWhite">
-          I'm a Software Engineer from London, UK. I'm currently a working at a
-          Security company as a TypeScript developer. I've been enjoyed my
-          career so far and am looking forward to building impactful products
-          for many years to come.
+        <p className="text-balance leading-8 text-textWhite">
+          I'm a Software Engineer from London, UK. I'm currently working as a
+          TypeScript Developer for{" "}
+          <Pill className="inline-flex items-center gap-1">
+            <Sophos className="text-[#005bc8]" />
+            Sophos
+          </Pill>
+          . I've been enjoying my career so far and am looking forward to
+          building impactful products for many years to come.
         </p>
       </article>
       <article className="my-8 flex flex-col gap-2">
@@ -25,51 +32,21 @@ export const About = () => {
         </h3>
         <div className="columns-1 gap-4 sm:columns-1">
           <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent"
-              }}
+            <Image
               src="/images/discourse-1.webp"
               alt="work"
               className="rounded-sm object-cover object-top sm:object-center"
             />
           </div>
           <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent"
-              }}
+            <Image
               src="/images/form-builder.webp"
               alt="work"
               className="rounded-sm object-cover object-top sm:object-center"
             />
           </div>
           <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <img
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent"
-              }}
+            <Image
               src="/images/todoer-1.webp"
               alt="work"
               className="rounded-sm object-cover object-top sm:object-center"
