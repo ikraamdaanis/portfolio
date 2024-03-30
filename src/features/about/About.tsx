@@ -1,7 +1,7 @@
+import { Image } from "components/Image";
+import { Pill } from "components/Pill";
+import { Sophos } from "components/icons/Sophos";
 import type { ReactNode } from "react";
-import { Image } from "./Image";
-import { Pill } from "./Pill";
-import { Sophos } from "./icons/Sophos";
 
 /** Section where I talk about my story. */
 export const About = () => {

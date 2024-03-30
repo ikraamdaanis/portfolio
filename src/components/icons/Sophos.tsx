@@ -1,5 +1,5 @@
-import React, { type SVGProps } from "react";
-import { cn } from "../../utils/cn";
+import { type SVGProps } from "react";
+import { cn } from "utils/cn";
 
 export const Sophos = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
