@@ -1,6 +1,7 @@
 import { type SVGProps } from "react";
 import { cn } from "utils/cn";
 
+/** Sophos logo in SVG format. */
 export const Sophos = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <span className="relative">

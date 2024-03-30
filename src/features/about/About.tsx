@@ -1,6 +1,7 @@
 import { Image } from "components/Image";
 import { Pill } from "components/Pill";
 import { Sophos } from "components/icons/Sophos";
+import { TypeScript } from "components/icons/TypeScript";
 import type { ReactNode } from "react";
 
 /** Section where I talk about my story. */
@@ -16,8 +17,12 @@ export const About = () => {
           About Me
         </h3>
         <p className="text-balance leading-8 text-textWhite">
-          I'm a Software Engineer from London, UK. I'm currently working as a
-          TypeScript dev for{" "}
+          I'm a Software Engineer from London, UK. I'm currently working as a{" "}
+          <Pill className="inline-flex items-center gap-1">
+            <TypeScript className="size-4" />
+            TypeScript
+          </Pill>{" "}
+          dev for{" "}
           <Pill className="inline-flex items-center gap-1">
             <Sophos className="text-[#005bc8]" />
             Sophos
