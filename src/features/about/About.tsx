@@ -17,13 +17,15 @@ export const About = () => {
         </h3>
         <p className="text-balance leading-8 text-textWhite">
           I'm a Software Engineer from London, UK. I'm currently working as a
-          TypeScript Developer for{" "}
+          TypeScript dev for{" "}
           <Pill className="inline-flex items-center gap-1">
             <Sophos className="text-[#005bc8]" />
             Sophos
           </Pill>
-          . I've been enjoying my career so far and am looking forward to
-          building impactful products for many years to come.
+          . Coding is my passion, and I absolutely love what I do. Every day, I
+          get to tackle new challenges and create impactful products that make a
+          difference. It's been an incredible journey so far and I'm excited to
+          see where my career takes me.
         </p>
       </article>
       <article className="my-8 flex flex-col gap-2">
