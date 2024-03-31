@@ -13,7 +13,7 @@ export const About = () => {
           I'm Ikraam - a{" "}
           <span className="text-brand-400">software engineer</span>
         </h1>
-        <h3 className="text-brand-400 font-semibold uppercase tracking-widest">
+        <h3 className="font-semibold uppercase tracking-widest text-brand-400">
           About Me
         </h3>
         <p className="text-balance leading-8 text-textWhite">
@@ -34,7 +34,7 @@ export const About = () => {
         </p>
       </article>
       <article className="my-8 flex flex-col gap-2">
-        <h3 className="text-brand-400 font-semibold uppercase tracking-widest">
+        <h3 className="font-semibold uppercase tracking-widest text-brand-400">
           Some side projects over the years
         </h3>
         <div className="columns-1 gap-4 sm:columns-1">
@@ -62,13 +62,5 @@ export const About = () => {
         </div>
       </article>
     </section>
-  );
-};
-
-const Content = ({ children }: { children: ReactNode }) => {
-  return (
-    <p className="mb-[4rem] text-[clamp(1.8rem,calc(20px+100*(40vw-100px)/1600),2.5rem)] font-medium text-textWhite">
-      {children}
-    </p>
   );
 };
