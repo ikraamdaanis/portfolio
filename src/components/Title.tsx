@@ -45,7 +45,7 @@ export const Title = ({ title }: Props) => {
     >
       <motion.h2
         ref={titleScope}
-        className={`title translate-y-full pb-4 text-center text-[clamp(2rem,calc(40px+100*(100vw-220px)/1600),6rem)] font-semibold uppercase leading-none text-brand-400 max-xl:pb-2 max-xl:text-left max-sm:w-fit max-sm:text-[10vw] title-${title.replace(" ", "")}`}
+        className={`title translate-y-full pb-4 text-center text-[clamp(2rem,calc(40px+100*(100vw-220px)/1600),5.5rem)] font-semibold uppercase leading-none text-brand-400 max-xl:pb-2 max-xl:text-left max-sm:w-fit max-sm:text-[10vw] title-${title.replace(" ", "")}`}
         initial={{ y: "100%" }}
       >
         {title}
