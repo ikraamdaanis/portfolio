@@ -1,4 +1,5 @@
 import { Sophos } from "components/icons/Sophos";
+import { TypeScript } from "components/icons/TypeScript";
 import { Pill } from "components/Pill";
 import { Title } from "components/Title";
 
@@ -23,10 +24,10 @@ export const About2 = () => {
             <p className="">
               I'm a Software Engineer from London, UK. I'm currently working as
               a{" "}
-              {/* <Pill className="inline-flex items-center gap-1">
-                <TypeScript className="size-4" />
+              <Pill className="inline-flex items-center gap-1">
+                <TypeScript className="size-6" />
                 TypeScript
-              </Pill>{" "} */}
+              </Pill>{" "}
               dev for{" "}
               <Pill className="inline-flex items-center gap-1">
                 <Sophos className="text-[#005bc8]" />
