@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  color: #fff;
+  background: #ffc5c0;
+  -webkit-text-fill-color: #fff;
+}
+
+*::selection {
+  color: #fff;
+  background: #ffc5c0;
+  -webkit-text-fill-color: #fff;
+}

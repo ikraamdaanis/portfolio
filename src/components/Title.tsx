@@ -45,14 +45,14 @@ export const Title = ({ title }: Props) => {
     >
       <motion.h2
         ref={titleScope}
-        className={`title translate-y-full pb-4 text-center text-[clamp(2rem,calc(40px+100*(100vw-220px)/1600),6rem)] font-semibold uppercase leading-none text-pink-300 max-xl:pb-2 max-xl:text-left max-sm:w-fit max-sm:text-[10vw] title-${title.replace(" ", "")}`}
+        className={`title translate-y-full pb-4 text-center text-[clamp(2rem,calc(40px+100*(100vw-220px)/1600),6rem)] font-semibold uppercase leading-none text-brand-400 max-xl:pb-2 max-xl:text-left max-sm:w-fit max-sm:text-[10vw] title-${title.replace(" ", "")}`}
         initial={{ y: "100%" }}
       >
         {title}
       </motion.h2>
       <motion.div
         ref={lineScope}
-        className={`title-line absolute bottom-0 right-0 h-0.5 w-0 bg-pink-300 title-line-${title.replace(" ", "")}`}
+        className={`title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-400 title-line-${title.replace(" ", "")}`}
         initial={{ width: 0 }}
       />
     </div>
