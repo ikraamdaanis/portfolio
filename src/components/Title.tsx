@@ -1,4 +1,4 @@
-import { motion, useAnimate, useScroll } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
 
@@ -9,30 +9,28 @@ interface Props {
 /** Titles for the different sections of the website. */
 export const Title = ({ title }: Props) => {
   const { width } = useWindowSize();
+
   const [titleScope, animateTitle] = useAnimate();
   const [lineScope, animateLine] = useAnimate();
+
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "center center"]
-  });
 
   useEffect(() => {
-    const titleAnimation = async () => {
+    async function titleAnimation() {
       await animateTitle(
         titleScope.current,
         { y: 0 },
         { duration: 1, ease: "easeOut" }
       );
-    };
+    }
 
-    const lineAnimation = async () => {
+    async function lineAnimation() {
       await animateLine(
         lineScope.current,
         { width: "100%" },
         { duration: 1.5, ease: "easeOut", delay: 0.2 }
       );
-    };
+    }
 
     titleAnimation();
     lineAnimation();
