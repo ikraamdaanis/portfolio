@@ -39,7 +39,7 @@ export const Title = ({ title }: Props) => {
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto my-32 overflow-hidden max-sm:my-16"
+      className="relative mx-auto my-32 w-fit overflow-hidden max-sm:my-16"
     >
       <motion.h2
         ref={titleScope}

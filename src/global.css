@@ -5,13 +5,13 @@
 }
 
 *::-moz-selection {
-  color: #fff;
+  color: #eeeeee;
   background: #ffc5c0;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: #eeeeee;
 }
 
 *::selection {
-  color: #fff;
+  color: #eeeeee;
   background: #ffc5c0;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: #eeeeee;
 }

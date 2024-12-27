@@ -18,7 +18,7 @@ export default {
           900: "#340B0B",
           950: "#1D0606"
         },
-        textWhite: "#d4d4d4",
+        textWhite: "#eeeeee",
         lightPink: "#ffcddd",
         arrowColor: "#ffc5c0",
         offWhite: "#e6e6e6",
