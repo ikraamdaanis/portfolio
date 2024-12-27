@@ -48,14 +48,14 @@ export const Title = ({ title }: { title: string }) => {
     >
       <motion.h2
         ref={titleScope}
-        className={`title translate-y-full pb-4 text-center text-[clamp(2rem,calc(40px+100*(100vw-220px)/1600),5.5rem)] font-semibold uppercase leading-none text-brand-400 max-xl:pb-2 max-xl:text-left max-sm:w-fit max-sm:text-[10vw] title-${title.replace(" ", "")}`}
+        className="translate-y-full bg-gradient-to-b from-brand-400 to-brand-600 bg-clip-text pb-2 text-center text-4xl font-semibold uppercase leading-none text-transparent sm:text-6xl md:text-7xl"
         initial={{ y: "100%" }}
       >
         {title}
       </motion.h2>
       <motion.div
         ref={lineScope}
-        className={`title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-400 title-line-${title.replace(" ", "")}`}
+        className={`title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-500 title-line-${title.replace(" ", "")}`}
         initial={{ width: 0 }}
       />
     </div>

@@ -27,10 +27,10 @@ export const Hero = () => {
         variants={containerVariants}
       >
         <motion.h1
-          className="relative w-full overflow-hidden text-[clamp(2.8rem,calc(40px+120*(100vw-420px)/1600),8rem)] font-semibold text-white"
+          className="relative w-full overflow-hidden pb-2 text-5xl font-semibold text-white sm:text-7xl md:text-8xl"
           style={{ y: headingY }}
         >
-          <span className="relative inline-block bg-gradient-to-b from-brand-300 to-brand-400 bg-clip-text text-transparent">
+          <span className="relative inline-block bg-gradient-to-b from-brand-400 to-brand-600 bg-clip-text text-transparent">
             I&#39;m Ikraam.
             <motion.div
               className="absolute inset-0 h-full w-full bg-backgroundDark"
@@ -39,7 +39,7 @@ export const Hero = () => {
           </span>
         </motion.h1>
         <motion.h2
-          className="relative text-[clamp(1.8rem,calc(20px+106*(100vw-420px)/1600),5rem)] font-medium leading-[1.2] text-white"
+          className="relative flex flex-col gap-2 text-4xl font-medium leading-[1.2] text-white sm:text-6xl md:text-7xl"
           style={{ y: subHeadingY }}
         >
           <span className="relative block overflow-hidden">

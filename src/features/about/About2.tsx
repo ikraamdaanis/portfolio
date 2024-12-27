@@ -3,12 +3,12 @@ import { Title } from "components/Title";
 /** Section where I talk about my story. */
 export const About2 = () => {
   const paragraphStyles =
-    "mb-12 font-medium leading-tight text-textWhite text-[clamp(1.8rem,calc(20px+100*(40vw-100px)/1600),1.75rem)] max-sm:mb-8 max-sm:text-[4.8vw]";
+    "mb-12 font-medium leading-tight text-textWhite text-lg sm:text-2xl md:text-3xl";
 
   return (
     <section
       id="about"
-      className="container relative mx-auto mb-32 max-w-screen-md max-sm:mb-0"
+      className="container relative mx-auto mb-32 max-w-[420px] px-4 max-sm:mb-0 sm:max-w-screen-md"
     >
       <Title title="About Me" />
       <article className="prose prose-invert max-w-none">
