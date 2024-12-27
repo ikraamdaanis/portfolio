@@ -1,9 +1,5 @@
-import { type HTMLAttributes, type ReactNode } from "react";
+import type { HTMLAttributes } from "react";
 import { cn } from "utils/cn";
-
-type Props = {
-  children: ReactNode;
-};
 
 export const Pill = (props: HTMLAttributes<HTMLSpanElement>) => {
   return (

@@ -2,7 +2,6 @@ import { Image } from "components/Image";
 import { Pill } from "components/Pill";
 import { Sophos } from "components/icons/Sophos";
 import { TypeScript } from "components/icons/TypeScript";
-import type { ReactNode } from "react";
 
 /** Section where I talk about my story. */
 export const About = () => {
