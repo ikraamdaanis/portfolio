@@ -3,7 +3,7 @@ import { Title } from "components/Title";
 /** Section where I talk about my story. */
 export const About2 = () => {
   const paragraphStyles =
-    "mb-12 font-medium leading-tight text-textWhite text-lg sm:text-2xl md:text-3xl";
+    "mb-12  leading-tight text-textWhite text-lg sm:text-2xl md:text-3xl";
 
   return (
     <section
