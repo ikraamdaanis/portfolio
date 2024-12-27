@@ -1,21 +1,26 @@
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
 
-interface Props {
-  title: string;
-}
+/**
+ * Titles for the different sections of the website.
+ */
+export const Title = ({ title }: { title: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-/** Titles for the different sections of the website. */
-export const Title = ({ title }: Props) => {
   const { width } = useWindowSize();
 
   const [titleScope, animateTitle] = useAnimate();
   const [lineScope, animateLine] = useAnimate();
 
-  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+    margin: "0px 0px -100px 0px"
+  });
 
   useEffect(() => {
+    if (!isInView) return;
+
     async function titleAnimation() {
       await animateTitle(
         titleScope.current,
@@ -34,12 +39,12 @@ export const Title = ({ title }: Props) => {
 
     titleAnimation();
     lineAnimation();
-  }, [width, title, animateTitle, animateLine]);
+  }, [width, title, animateTitle, animateLine, isInView]);
 
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto my-32 w-fit overflow-hidden max-sm:my-16"
+      className="relative mx-auto my-20 w-fit overflow-hidden max-sm:my-16"
     >
       <motion.h2
         ref={titleScope}
