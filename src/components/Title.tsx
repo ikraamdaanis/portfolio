@@ -42,20 +42,17 @@ export const Title = ({ title }: { title: string }) => {
   }, [width, title, animateTitle, animateLine, isInView]);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative mx-auto my-20 w-fit overflow-hidden max-sm:my-16"
-    >
+    <div ref={containerRef} className="relative mb-8 w-fit overflow-hidden">
       <motion.h2
         ref={titleScope}
-        className="translate-y-full bg-gradient-to-b from-brand-400 to-brand-600 bg-clip-text pb-2 text-center text-4xl font-semibold uppercase leading-none text-transparent sm:text-6xl md:text-7xl"
+        className="translate-y-full bg-gradient-to-b from-brand-400 to-brand-600 bg-clip-text pb-1 text-3xl font-semibold uppercase leading-none text-transparent sm:text-4xl"
         initial={{ y: "100%" }}
       >
         {title}
       </motion.h2>
       <motion.div
         ref={lineScope}
-        className={`title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-500 title-line-${title.replace(" ", "")}`}
+        className="title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-500"
         initial={{ width: 0 }}
       />
     </div>
