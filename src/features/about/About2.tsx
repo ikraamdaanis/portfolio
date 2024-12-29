@@ -9,7 +9,7 @@ export const About2 = () => {
   return (
     <section
       id="about"
-      className="container relative mx-auto mb-32 max-w-[420px] px-4 max-sm:mb-0 sm:max-w-screen-md"
+      className="container relative mx-auto mb-32 px-4 max-sm:mb-0 sm:max-w-screen-md"
     >
       <Title title="About Me" />
       <article className="prose prose-invert max-w-none">
