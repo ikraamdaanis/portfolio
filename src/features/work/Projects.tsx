@@ -8,11 +8,10 @@ export const Projects = () => {
       className="relative mx-auto flex min-h-screen max-w-screen-md flex-col justify-center px-4"
     >
       <Title title="My Projects" />
-      <div className="mx-auto w-[1240px] max-w-full">
-        {projects.map(project => (
-          <ProjectItem key={project.title} project={project} />
-        ))}
-      </div>
+
+      {projects.map(project => (
+        <ProjectItem key={project.title} project={project} />
+      ))}
     </section>
   );
 };
@@ -32,8 +31,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Todoer",
-    description1: `Todoer is a clone of the task managing app Todoist. It's used to create projects to organize your daily tasks. You can create an account using your email and password or Google Sign In. I have used Firebase Firestore for the backend which stores user information and data.`,
-    description2: `I have implemented create, read, update and delete features for the tasks. They can be sorted by the due date and alphabetically. All tasks can be updated and completed and entire projects can be deleted. I also cloned the Todoist home screen for the landing page.`,
+    description1:
+      "Todoer is a clone of the task managing app Todoist. It's used to create projects to organize your daily tasks. You can create an account using your email and password or Google Sign In. I have used Firebase Firestore for the backend which stores user information and data.",
+    description2:
+      "I have implemented create, read, update and delete features for the tasks. They can be sorted by the due date and alphabetically. All tasks can be updated and completed and entire projects can be deleted. I also cloned the Todoist home screen for the landing page.",
     list1: ["React", "Redux", "Firebase", "React Router"],
     list2: [
       "Styled Components",
@@ -48,8 +49,10 @@ export const projects: Project[] = [
   },
   {
     title: "UltraStore",
-    description1: `UltraStore is an E-commerce store that sells tech items. Customers can create an account, add products to the cart, order items and view past orders. All payments are carried out by PayPal and once payment is received, the order will be completed`,
-    description2: `This app also includes several admin features. Admins can add new products to the catalogue and upload custom images for each item. User accounts can be edited and deleted. Orders can be viewed and marked as delivered.`,
+    description1:
+      "UltraStore is an E-commerce store that sells tech items. Customers can create an account, add products to the cart, order items and view past orders. All payments are carried out by PayPal and once payment is received, the order will be completed",
+    description2:
+      "This app also includes several admin features. Admins can add new products to the catalogue and upload custom images for each item. User accounts can be edited and deleted. Orders can be viewed and marked as delivered.",
     list1: ["React", "Redux", "React Router", "Bootstrap"],
     list2: ["Express", "MongoDB", "Mongoose", "NodeJS"],
     repo: "https://github.com/IbnDaanis/ultrastore",
@@ -59,17 +62,10 @@ export const projects: Project[] = [
   },
   {
     title: "Friedrik",
-    description1: `This project started with me practising React Hooks to make a functional shopping
-    cart. However, I got carried away... I made the user interface look very nice, then I
-    decided to add animations to make it look more interesting. Framer Motion for
-    the animations and SCSS for styling.`,
+    description1:
+      "This project started with me practising React Hooks to make a functional shopping cart. However, I got carried away... I made the user interface look very nice, then I decided to add animations to make it look more interesting. Framer Motion for the animations and SCSS for styling.",
     description2: "",
-    list1: [
-      "React",
-      "React Context",
-      "React Router",
-      "Framer Motion Animations"
-    ],
+    list1: ["React", "React Context", "React Router", "Framer Motion"],
     list2: [
       "Page Transitions",
       "Dark mode if set on system",
