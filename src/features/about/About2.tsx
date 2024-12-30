@@ -1,4 +1,3 @@
-import { Image } from "components/Image";
 import { Title } from "components/Title";
 
 /** Section where I talk about my story. */
@@ -44,34 +43,6 @@ export const About2 = () => {
               problems. When I build something, I make sure it's done right,
               with perfection.
             </p>
-          </div>
-        </div>
-      </article>
-      <article className="my-8 flex flex-col gap-2">
-        <h3 className="font-semibold uppercase tracking-widest text-brand-400">
-          Some side projects over the years
-        </h3>
-        <div className="columns-1 gap-4 sm:columns-1">
-          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <Image
-              src="/images/discourse-1.webp"
-              alt="work"
-              className="rounded-sm object-cover object-top sm:object-center"
-            />
-          </div>
-          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <Image
-              src="/images/form-builder.webp"
-              alt="work"
-              className="rounded-sm object-cover object-top sm:object-center"
-            />
-          </div>
-          <div className="relative mb-4 aspect-[16/10] overflow-hidden">
-            <Image
-              src="/images/todoer-1.webp"
-              alt="work"
-              className="rounded-sm object-cover object-top sm:object-center"
-            />
           </div>
         </div>
       </article>
