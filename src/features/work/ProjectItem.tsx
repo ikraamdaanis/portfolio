@@ -27,7 +27,7 @@ export const ProjectItem = ({
       parent: document.querySelector(`.${title}`),
       intensity1: 0.1,
       intensity2: 0.1,
-      angle2: Math.PI / 2,
+      angle2: Math.PI * Math.floor(Math.random() * 3),
       imagesRatio: 0.625,
       easing: "power3.out",
       speedIn: 0.8,
