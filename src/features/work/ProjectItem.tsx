@@ -1,13 +1,9 @@
 import { GithubIcon } from "components/GitHubIcon";
-import { Arrow } from "features/work/Arrow";
+import { ProjectImage } from "features/work/ProjectImage";
 import type { Project } from "features/work/Projects";
 import { motion } from "framer-motion";
 import hoverEffect from "hover-effect";
-import { useEffect, useRef } from "react";
-
-interface Props {
-  project: Project;
-}
+import { useEffect } from "react";
 
 export const ProjectItem = ({
   project: {
@@ -21,7 +17,9 @@ export const ProjectItem = ({
     image1,
     image2
   }
-}: Props) => {
+}: {
+  project: Project;
+}) => {
   useEffect(() => {
     new hoverEffect({
       parent: document.querySelector(`.${title}`),
@@ -37,9 +35,6 @@ export const ProjectItem = ({
       displacementImage: `/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`
     });
   }, [image1, image2, title]);
-
-  const imageCover1 = useRef<HTMLDivElement>(null);
-  const imageCover2 = useRef<HTMLDivElement>(null);
 
   return (
     <article className="mb-8 flex flex-col pb-20 xl:border-b xl:border-[#252525] xl:pb-8">
@@ -97,10 +92,10 @@ export const ProjectItem = ({
             </motion.div>
           </a>
         </div>
-        <Arrow />
+        {/* <Arrow /> */}
       </div>
-      <div className="flex aspect-[16/10] w-full items-start justify-end overflow-hidden sm:hidden lg:justify-center xl:order-2">
-        <div className="h-full w-[70%] lg:w-full">
+      <div className="hidden aspect-[16/10] w-full items-start justify-end overflow-hidden md:flex lg:justify-center xl:order-2">
+        <div className="h-full w-full">
           {website ? (
             <a
               href={website}
@@ -115,31 +110,17 @@ export const ProjectItem = ({
           )}
         </div>
       </div>
-      {/* <motion.div
-        initial={{ display: "none" }}
-        animate={{ display: "block" }}
-        className="aspect-[16/10] sm:relative sm:block"
-      >
-        <div className="h-full w-full">
+      <div className="relative aspect-[16/10] md:hidden">
+        <div className="relative h-full w-full">
           {website ? (
             <a href={website} target="_blank" rel="noreferrer">
-              <ProjectImage
-                image1={image1}
-                image2={image2}
-                imageCover1={imageCover1}
-                imageCover2={imageCover2}
-              />
+              <ProjectImage image1={image1} image2={image2} />
             </a>
           ) : (
-            <ProjectImage
-              image1={image1}
-              image2={image2}
-              imageCover1={imageCover1}
-              imageCover2={imageCover2}
-            />
+            <ProjectImage image1={image1} image2={image2} />
           )}
         </div>
-      </motion.div> */}
+      </div>
     </article>
   );
 };
