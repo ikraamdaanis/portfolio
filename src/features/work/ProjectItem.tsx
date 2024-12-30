@@ -4,6 +4,8 @@ import type { Project } from "features/work/Projects";
 import { motion } from "framer-motion";
 import hoverEffect from "hover-effect";
 import { useEffect } from "react";
+import { cn } from "utils/cn";
+import { defaultTextStyles } from "utils/consts";
 
 export const ProjectItem = ({
   project: {
@@ -36,20 +38,18 @@ export const ProjectItem = ({
     });
   }, [image1, image2, title]);
 
+  const textStyles = cn("mb-8", defaultTextStyles);
+
   return (
-    <article className="mb-8 flex flex-col pb-20 xl:border-b xl:border-[#252525] xl:pb-8">
+    <article className="mb-10 mt-10 flex flex-col border-b border-b-borderDark pb-10">
       <div className="relative mb-8 flex w-full justify-between">
-        <div className="w-[70%] md:w-full">
-          <h3 className="mb-4 text-[clamp(2rem,calc(40px+100*(80vw-220px)/1600),6rem)] font-semibold text-pink-300">
+        <div className="w-full">
+          <h3 className="mb-4 text-3xl font-semibold text-brand-500">
             {title}
           </h3>
-          <p className="mb-8 w-[95%] max-w-[800px] text-[1.6rem] font-light leading-8 sm:text-[1.1rem] sm:leading-normal">
-            {description1}
-          </p>
-          <p className="mb-8 w-[95%] max-w-[800px] text-[1.6rem] font-light leading-8 sm:text-[1.1rem] sm:leading-normal">
-            {description2}
-          </p>
-          <h4 className="mb-3 text-[1.8rem] font-light text-pink-300 sm:text-[1.3rem]">
+          <p className={textStyles}>{description1}</p>
+          <p className={textStyles}>{description2}</p>
+          <h4 className="mb-3 text-[28px] font-normal text-brand-500">
             Tech Stack and Features:
           </h4>
           <div className="mb-12 flex sm:mb-6 sm:flex-col sm:justify-between">
@@ -57,7 +57,7 @@ export const ProjectItem = ({
               {list1.map(item => (
                 <li
                   key={item}
-                  className="text-[1.5rem] font-normal text-gray-100 sm:text-[1.1rem]"
+                  className={cn(defaultTextStyles, "text-sm sm:text-xl")}
                 >
                   - {item}
                 </li>
@@ -67,7 +67,7 @@ export const ProjectItem = ({
               {list2.map(item => (
                 <li
                   key={item}
-                  className="text-[1.5rem] font-normal text-gray-100 sm:text-[1.1rem]"
+                  className={cn(defaultTextStyles, "text-sm sm:text-xl")}
                 >
                   - {item}
                 </li>
@@ -78,11 +78,9 @@ export const ProjectItem = ({
             href={repo}
             rel="noreferrer"
             target="_blank"
-            className="group inline-flex items-center fill-pink-300"
+            className="group inline-flex items-center fill-brand-500 text-brand transition-colors hover:fill-textWhite hover:text-textWhite"
           >
-            <span className="duration-400 mr-2 text-[1.8rem] font-light text-pink-300 transition-colors delay-200 group-hover:text-white sm:text-[1.3rem]">
-              Link to Repo:
-            </span>
+            <span className="mr-2 text-[28px] font-normal">Link to Repo:</span>
             <motion.div
               whileHover={{ scale: 1.3 }}
               transition={{ duration: 0.4 }}
@@ -92,7 +90,6 @@ export const ProjectItem = ({
             </motion.div>
           </a>
         </div>
-        {/* <Arrow /> */}
       </div>
       <div className="hidden aspect-[16/10] w-full items-start justify-end overflow-hidden md:flex lg:justify-center xl:order-2">
         <div className="h-full w-full">

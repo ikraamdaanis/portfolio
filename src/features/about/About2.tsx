@@ -1,9 +1,10 @@
 import { Title } from "components/Title";
+import { cn } from "utils/cn";
+import { defaultTextStyles } from "utils/consts";
 
 /** Section where I talk about my story. */
 export const About2 = () => {
-  const paragraphStyles =
-    "mb-12 leading-tight text-textWhite text-lg sm:text-2xl";
+  const paragraphStyles = cn("mb-12", defaultTextStyles);
 
   return (
     <section
