@@ -1,14 +1,11 @@
 import { motion, useAnimate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { useWindowSize } from "../hooks/useWindowSize";
 
 /**
  * Titles for the different sections of the website.
  */
 export const Title = ({ title }: { title: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const { width } = useWindowSize();
 
   const [titleScope, animateTitle] = useAnimate();
   const [lineScope, animateLine] = useAnimate();
@@ -39,7 +36,7 @@ export const Title = ({ title }: { title: string }) => {
 
     titleAnimation();
     lineAnimation();
-  }, [width, title, animateTitle, animateLine, isInView]);
+  }, [title, animateTitle, animateLine, isInView]);
 
   return (
     <div ref={containerRef} className="relative mb-8 w-fit overflow-hidden">
