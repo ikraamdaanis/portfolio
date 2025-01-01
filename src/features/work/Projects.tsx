@@ -38,8 +38,8 @@ export const projects: Project[] = [
     list2: ["Tailwind CSS", "PostgresSQL", "Prisma", "Bun"],
     repo: "https://github.com/ikraamdaanis/discourse",
     website: "https://discourseapp.vercel.app/",
-    image1: "/images/discourse-1.webp",
-    image2: "/images/discourse-2.webp"
+    image1: "/portfolio/images/discourse-1.webp",
+    image2: "/portfolio/images/discourse-2.webp"
   },
   {
     title: "Todoer",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     list2: ["React Router", "Styled Components"],
     repo: "https://github.com/ikraamdaanis/todoer",
     website: "https://todoer-app.netlify.app/",
-    image1: "/images/todoer-1.webp",
-    image2: "/images/todoer-2.webp"
+    image1: "/portfolio/images/todoer-1.webp",
+    image2: "/portfolio/images/todoer-2.webp"
   }
 ];

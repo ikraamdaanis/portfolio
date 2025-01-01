@@ -34,7 +34,7 @@ export const ProjectItem = ({
       speedOut: 0.8,
       image1,
       image2,
-      displacementImage: `/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`
+      displacementImage: `/portfolio/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`
     });
   }, [image1, image2, title]);
 
