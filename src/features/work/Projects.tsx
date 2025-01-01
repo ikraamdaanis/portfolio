@@ -38,7 +38,7 @@ export const projects: Project[] = [
     list1: ["React.js", "Next.js", "Zustand", "React Query"],
     list2: ["Tailwind CSS", "PostgresSQL", "Prisma", "Bun"],
     repo: "https://github.com/ikraamdaanis/discourse",
-    website: "",
+    website: "https://discourseapp.vercel.app/",
     image1: "/images/discourse-1.webp",
     image2: "/images/discourse-2.webp"
   },
