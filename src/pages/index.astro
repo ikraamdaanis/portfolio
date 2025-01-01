@@ -1,6 +1,6 @@
 ---
 import { Hero } from "components/Hero";
-import { About2 } from "features/about/About2";
+import { About } from "features/about/About";
 import { Projects } from "features/work/Projects";
 import "global.css";
 import Layout from "layouts/Layout.astro";
@@ -9,7 +9,7 @@ import Layout from "layouts/Layout.astro";
 <Layout title="Ikraam | Software Engineer">
   <main >
     <Hero  client:only/>
-    <About2 client:only/>
+    <About client:only/>
     <Projects client:only/>
   </main>
 </Layout>
