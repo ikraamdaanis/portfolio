@@ -23,6 +23,9 @@ export const ProjectItem = ({
   project: Project;
 }) => {
   useEffect(() => {
+    const originalConsoleLog = console.log;
+    console.log = () => {};
+
     new hoverEffect({
       parent: document.querySelector(`.${title}`),
       intensity1: 0.1,
@@ -36,6 +39,8 @@ export const ProjectItem = ({
       image2,
       displacementImage: `/portfolio/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`
     });
+
+    console.log = originalConsoleLog;
   }, [image1, image2, title]);
 
   const textStyles = cn("mb-8", defaultTextStyles);
@@ -107,7 +112,7 @@ export const ProjectItem = ({
           )}
         </div>
       </div>
-      <div className="relative aspect-[16/10] md:hidden">
+      <div className="relative md:hidden">
         <div className="relative h-full w-full">
           {website ? (
             <a href={website} target="_blank" rel="noreferrer">

@@ -17,7 +17,7 @@ export const About = () => {
             <h2 className="sr-only">My Background</h2>
             <p className={paragraphStyles}>
               I'm a Software Engineer from London, UK. I'm currently working as
-              developer for a small startup. Coding is my passion, and I
+              a developer for a small startup. Coding is my passion, and I
               absolutely love what I do. Every day, I get to tackle new
               challenges and create impactful products that make a difference.
               It's been an incredible journey so far and I'm excited to see

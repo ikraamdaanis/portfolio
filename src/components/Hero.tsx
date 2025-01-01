@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section className="relative mx-auto flex min-h-screen max-w-screen-md flex-col items-center justify-center px-4 text-center lg:text-left">
       <motion.div
-        className="flex w-full flex-col"
+        className="mb-40 flex w-full flex-col sm:mb-0"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
