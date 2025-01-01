@@ -8,7 +8,6 @@ export const Projects = () => {
       className="relative mx-auto flex min-h-screen max-w-screen-md flex-col justify-center px-4"
     >
       <Title title="My Projects" />
-
       {projects.map(project => (
         <ProjectItem key={project.title} project={project} />
       ))}
