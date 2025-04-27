@@ -7,7 +7,7 @@ export const Pill = (props: HTMLAttributes<HTMLSpanElement>) => {
       {...props}
       className={cn(
         props.className,
-        "relative rounded-md border border-zinc-700 bg-backgroundDark2 px-1 text-white"
+        "bg-background-dark2 relative rounded-md border border-zinc-700 px-1 text-white"
       )}
     >
       {props.children}

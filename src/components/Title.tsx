@@ -1,4 +1,4 @@
-import { motion, useAnimate, useInView } from "framer-motion";
+import { motion, useAnimate, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
 
 /**

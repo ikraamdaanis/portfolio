@@ -1,8 +1,8 @@
 import { GithubIcon } from "components/GitHubIcon";
 import { ProjectImage } from "features/work/ProjectImage";
 import type { Project } from "features/work/Projects";
-import { motion } from "framer-motion";
 import hoverEffect from "hover-effect";
+import { motion } from "motion/react";
 import { useEffect } from "react";
 import { cn } from "utils/cn";
 import { defaultTextStyles } from "utils/consts";
@@ -46,7 +46,7 @@ export const ProjectItem = ({
   const textStyles = cn("mb-8", defaultTextStyles);
 
   return (
-    <article className="border-b-borderDark mt-10 mb-10 flex flex-col border-b pb-10">
+    <article className="border-b-border-dark mt-10 mb-10 flex flex-col border-b pb-10">
       <div className="relative mb-8 flex w-full justify-between">
         <div className="w-full">
           <h3 className="text-brand-400 mb-4 text-3xl font-semibold">
