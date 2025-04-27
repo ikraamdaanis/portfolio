@@ -1,20 +1,13 @@
-import js from "@eslint/js";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import filenamesSimple from "eslint-plugin-filenames-simple";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 
 const eslintConfig = [
-  js.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        project: "./tsconfig.json",
-        ecmaVersion: "latest",
-        sourceType: "module"
-      }
+      parser: tsParser
     },
     plugins: {
       "@typescript-eslint": tsPlugin,
