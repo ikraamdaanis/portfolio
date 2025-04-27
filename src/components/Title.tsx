@@ -21,7 +21,7 @@ export const Title = ({ title }: { title: string }) => {
     async function titleAnimation() {
       await animateTitle(
         titleScope.current,
-        { y: 0 },
+        { y: "-100%" },
         { duration: 1, ease: "easeOut" }
       );
     }
@@ -42,14 +42,14 @@ export const Title = ({ title }: { title: string }) => {
     <div ref={containerRef} className="relative mb-8 w-fit overflow-hidden">
       <motion.h2
         ref={titleScope}
-        className="translate-y-full bg-gradient-to-b from-brand-400 to-brand-600 bg-clip-text pb-1 text-3xl font-semibold uppercase leading-none text-transparent sm:text-4xl"
+        className="from-brand-400 to-brand-500 translate-y-full bg-gradient-to-b bg-clip-text pb-1 text-3xl leading-none font-semibold text-transparent uppercase sm:text-4xl"
         initial={{ y: "100%" }}
       >
         {title}
       </motion.h2>
       <motion.div
         ref={lineScope}
-        className="title-line absolute bottom-0 right-0 h-0.5 w-0 bg-brand-500"
+        className="title-line bg-brand-500 absolute right-0 bottom-0 h-0.5 w-0"
         initial={{ width: 0 }}
       />
     </div>

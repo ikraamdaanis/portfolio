@@ -1,17 +1,47 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-brand: #d84847;
+  --color-brand-50: #f8dfde;
+  --color-brand-100: #f5cece;
+  --color-brand-200: #edacac;
+  --color-brand-300: #e68b8a;
+  --color-brand-400: #df6969;
+  --color-brand-500: #d84847;
+  --color-brand-600: #bf2928;
+  --color-brand-700: #901f1f;
+  --color-brand-800: #621515;
+  --color-brand-900: #340b0b;
+  --color-brand-950: #1d0606;
+
+  /* Custom colors */
+  --color-text-white: #eeeeee;
+  --color-light-pink: #ffcddd;
+  --color-arrow-color: #ffc5c0;
+  --color-off-white: #e6e6e6;
+  --color-black: #000;
+  --color-dark-black: #151515;
+  --color-highlight: #ffc5c0;
+  --color-placeholder: #a0a0a0;
+  --color-cursor: #afafaf;
+  --color-background-dark: #18181b;
+  --color-background-dark2: #1a1a1d;
+  --color-background-light: #fafafa;
+  --color-background-light2: #fff;
+  --color-border-dark: #2b2b31;
+  --color-border-light: #ececec;
+  --color-zinc-hover: #ebebeb;
 }
 
 *::-moz-selection {
-  color: #eeeeee;
-  background: #ffc5c0;
-  -webkit-text-fill-color: #eeeeee;
+  color: var(--color-text-white);
+  background: var(--color-highlight);
+  -webkit-text-fill-color: var(--color-text-white);
 }
 
 *::selection {
-  color: #eeeeee;
-  background: #ffc5c0;
-  -webkit-text-fill-color: #eeeeee;
+  color: var(--color-text-white);
+  background: var(--color-highlight);
+  -webkit-text-fill-color: var(--color-text-white);
 }

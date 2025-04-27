@@ -46,15 +46,15 @@ export const ProjectItem = ({
   const textStyles = cn("mb-8", defaultTextStyles);
 
   return (
-    <article className="mb-10 mt-10 flex flex-col border-b border-b-borderDark pb-10">
+    <article className="border-b-borderDark mt-10 mb-10 flex flex-col border-b pb-10">
       <div className="relative mb-8 flex w-full justify-between">
         <div className="w-full">
-          <h3 className="mb-4 text-3xl font-semibold text-brand-500">
+          <h3 className="text-brand-400 mb-4 text-3xl font-semibold">
             {title}
           </h3>
           <p className={textStyles}>{description1}</p>
           <p className={textStyles}>{description2}</p>
-          <h4 className="mb-3 text-[28px] font-normal text-brand-500">
+          <h4 className="text-brand-400 mb-3 text-2xl font-normal">
             Tech Stack and Features:
           </h4>
           <div className="mb-12 flex sm:mb-6 sm:flex-col sm:justify-between">
@@ -83,15 +83,15 @@ export const ProjectItem = ({
             href={repo}
             rel="noreferrer"
             target="_blank"
-            className="group inline-flex items-center fill-brand-500 text-brand transition-colors hover:fill-textWhite hover:text-textWhite"
+            className="group fill-brand-400 text-brand-400 hover:fill-textWhite hover:text-textWhite inline-flex items-center transition-colors"
           >
-            <span className="mr-2 text-[28px] font-normal">Link to Repo:</span>
+            <span className="mr-2 text-lg font-normal">Link to Repo:</span>
             <motion.div
               whileHover={{ scale: 1.3 }}
               transition={{ duration: 0.4 }}
               className="scale-110"
             >
-              <GithubIcon />
+              <GithubIcon className="text-brand-400 size-4 min-w-4" />
             </motion.div>
           </a>
         </div>
