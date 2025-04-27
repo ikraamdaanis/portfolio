@@ -1,7 +1,7 @@
 import { Title } from "components/Title";
 import { ProjectItem } from "features/work/ProjectItem";
 
-export const Projects = () => {
+export function Projects() {
   return (
     <section
       id="projects"
@@ -13,7 +13,7 @@ export const Projects = () => {
       ))}
     </section>
   );
-};
+}
 
 export interface Project {
   title: string;

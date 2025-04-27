@@ -1,4 +1,4 @@
-import { GithubIcon } from "components/GitHubIcon";
+import { GithubIcon } from "components/icons/Github";
 import { ProjectImage } from "features/work/ProjectImage";
 import type { Project } from "features/work/Projects";
 import hoverEffect from "hover-effect";
@@ -83,7 +83,7 @@ export const ProjectItem = ({
             href={repo}
             rel="noreferrer"
             target="_blank"
-            className="group fill-brand-400 text-brand-400 hover:fill-textWhite hover:text-textWhite inline-flex items-center transition-colors"
+            className="group fill-brand-400 text-brand-400 hover:fill-text-white hover:text-text-white inline-flex items-center transition-colors"
           >
             <span className="mr-2 text-lg font-normal">Link to Repo:</span>
             <motion.div
@@ -91,7 +91,7 @@ export const ProjectItem = ({
               transition={{ duration: 0.4 }}
               className="scale-110"
             >
-              <GithubIcon className="text-brand-400 size-4 min-w-4" />
+              <GithubIcon className="size-4 min-w-4" />
             </motion.div>
           </a>
         </div>
