@@ -23,6 +23,7 @@ export const ProjectItem = ({
   project: Project;
 }) => {
   useEffect(() => {
+    // Disable console.log for hover-effect
     const originalConsoleLog = console.log;
     console.log = () => {};
 
