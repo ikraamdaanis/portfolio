@@ -5,18 +5,12 @@
 
 @theme {
   /* Brand colors */
-  --color-brand: #d84847;
-  --color-brand-50: #f8dfde;
-  --color-brand-100: #f5cece;
-  --color-brand-200: #edacac;
-  --color-brand-300: #e68b8a;
-  --color-brand-400: #df6969;
-  --color-brand-500: #d84847;
-  --color-brand-600: #bf2928;
-  --color-brand-700: #901f1f;
-  --color-brand-800: #621515;
-  --color-brand-900: #340b0b;
-  --color-brand-950: #1d0606;
+  --color-brand: #faf9f5;
+  --color-text-color: #171717;
+
+  --font-family: "STIX Two Text", sans-serif;
+
+  --text-text-size: 17px;
 
   /* Custom colors */
   --color-text-white: #eeeeee;
@@ -159,8 +153,5 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background-dark text-white;
   }
 }

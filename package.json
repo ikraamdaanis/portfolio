@@ -12,7 +12,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "4.2.5",
+    "@fontsource-variable/playfair-display": "^5.2.8",
     "@fontsource-variable/raleway": "^5.1.0",
+    "@fontsource-variable/stix-two-text": "^5.2.8",
     "@radix-ui/react-slot": "^1.2.0",
     "@tailwindcss/vite": "^4.1.4",
     "@tsparticles/engine": "^3.8.1",
@@ -29,7 +31,9 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^19.0.0",
+    "react-aria-components": "^1.13.0",
     "react-dom": "^19.0.0",
+    "simple-icons": "^15.16.1",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.7.2"

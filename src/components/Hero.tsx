@@ -1,64 +1,30 @@
-import { motion, useScroll, useTransform } from "motion/react";
-
-export const Hero = () => {
-  const { scrollY } = useScroll();
-
-  const headingY = useTransform(scrollY, [0, -500], [0, -50]);
-  const subHeadingY = useTransform(scrollY, [0, -500], [0, -40]);
-
-  const lineVariants = {
-    hidden: { y: 0 },
-    visible: {
-      y: "-100%",
-      transition: { duration: 0.8, ease: [0.6, 0, 0.1, 1] }
-    }
-  };
-
-  const containerVariants = {
-    hidden: { transition: { staggerChildren: 0.4 } },
-    visible: { transition: { staggerChildren: 0.4 } }
-  };
-
+export function Hero() {
   return (
-    <section className="relative mx-auto flex min-h-screen max-w-screen-md flex-col items-center justify-center px-4 text-center lg:text-left">
-      <motion.div
-        className="mb-40 flex w-full flex-col sm:mb-0"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.h1
-          className="relative w-full overflow-hidden pb-2 text-[clamp(2.8rem,calc(40px+120*(100vw-420px)/1600),8rem)] font-semibold text-white"
-          style={{ y: headingY }}
-        >
-          <span className="from-brand-400 to-brand-600 relative inline-block bg-gradient-to-b bg-clip-text text-transparent">
-            I&#39;m Ikraam
-            <motion.div
-              className="bg-background-dark absolute inset-0 h-full w-full"
-              variants={lineVariants}
-            />
-          </span>
-        </motion.h1>
-        <motion.h2
-          className="relative flex flex-col gap-2 text-[clamp(1.8rem,calc(20px+106*(100vw-420px)/1600),4.5rem)] leading-none font-medium text-white"
-          style={{ y: subHeadingY }}
-        >
-          <span className="relative block overflow-hidden">
-            Software Developer
-            <motion.div
-              className="bg-background-dark absolute inset-0 h-full w-full"
-              variants={lineVariants}
-            />
-          </span>
-          <span className="relative block overflow-hidden">
-            From London
-            <motion.div
-              className="bg-background-dark absolute inset-0 h-full w-full"
-              variants={lineVariants}
-            />
-          </span>
-        </motion.h2>
-      </motion.div>
+    <section className="mx-auto max-w-2xl px-4 py-24">
+      <h1 className="mb-8 text-2xl font-medium text-neutral-900 dark:text-neutral-100">
+        Ikraam Daanis
+      </h1>
+      <div className="text-[17px]">
+        <p className="mb-4">
+          I'm a Software Engineer from London, UK. I'm currently working as a
+          developer for a small startup. Coding is my passion, and I absolutely
+          love what I do. Every day, I get to tackle new challenges and create
+          impactful products that make a difference.
+        </p>
+        <p className="mb-4">
+          After a few years in the industry, I've built several full-stack
+          applications used by hundreds of thousands of customers. I enjoy
+          building web apps that are impactful and valuable to our customers.
+          These days I focus a lot on writing clean code that's easy to maintain
+          and making sure everything performs well.
+        </p>
+        <p className="mb-4">
+          I love working with other developers and sharing what I know. The tech
+          world keeps changing and that's what makes it exciting - there's
+          always something new to learn and better ways to solve problems. When
+          I build something, I make sure it's done right, with perfection.
+        </p>
+      </div>
     </section>
   );
-};
+}
