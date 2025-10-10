@@ -25,7 +25,6 @@ const {
 <article>
   <h3 class="text-xl font-medium">{title}</h3>
   <div class="relative mt-2 mb-4 aspect-[16/10] overflow-hidden rounded-[2px]">
-    <div class="absolute h-full w-full animate-pulse bg-neutral-200"></div>
     <Image
       src={image1}
       alt={`${title} screenshot 1`}
@@ -36,6 +35,7 @@ const {
       class="relative z-10 h-full w-full object-cover"
       loading={isFirst ? "eager" : "lazy"}
       fetchpriority={isFirst ? "high" : undefined}
+      decoding="sync"
     />
   </div>
   <p class="text-text-size mb-3">{description1}</p>
