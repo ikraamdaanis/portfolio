@@ -1,15 +1,25 @@
 ---
-import { Image } from 'astro:assets';
-import SimpleIcon from 'components/icons/simple-icon.astro';
-import Zustand from 'components/icons/zustand.astro';
-import type { Project } from 'data/projects-data';
+import { Image } from "astro:assets";
+import SimpleIcon from "components/icons/simple-icon.astro";
+import Zustand from "components/icons/zustand.astro";
+import type { Project } from "data/projects-data";
 
 interface Props {
   project: Project;
+  isFirst?: boolean;
 }
 
-const { project } = Astro.props;
-const { title, description1, description2, list1, list2, repo, website, image1 } = project;
+const { project, isFirst = false } = Astro.props;
+const {
+  title,
+  description1,
+  description2,
+  list1,
+  list2,
+  repo,
+  website,
+  image1
+} = project;
 ---
 
 <article>
@@ -19,47 +29,57 @@ const { title, description1, description2, list1, list2, repo, website, image1 }
     <Image
       src={image1}
       alt={`${title} screenshot 1`}
+      width={1280}
+      height={800}
+      widths={[320, 640, 960, 1280]}
+      sizes="(max-width: 640px) 100vw, 640px"
       class="relative z-10 h-full w-full object-cover"
-      loading="lazy"
+      loading={isFirst ? "eager" : "lazy"}
+      fetchpriority={isFirst ? "high" : undefined}
     />
   </div>
   <p class="text-text-size mb-3">{description1}</p>
   <p class="text-text-size mb-3">{description2}</p>
-  <div class="mb-3 flex flex-wrap gap-2">
-    {[...list1, ...list2].map(tech => (
-      <span class="flex items-center gap-1.5 rounded-md bg-neutral-100 px-2 py-1 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
-        {tech.icon && (
-          <span class="flex items-center justify-center">
-            {tech.icon === "zustand" ? (
-              <Zustand class="size-[15px] grayscale" />
-            ) : (
-              <SimpleIcon icon={tech.icon} />
-            )}
-          </span>
-        )}
-        {tech.name}
-      </span>
-    ))}
-  </div>
+  <ul class="mb-3 flex flex-wrap gap-2">
+    {
+      [...list1, ...list2].map(tech => (
+        <li class="flex items-center gap-1.5 rounded-md bg-neutral-100 px-2 py-1 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+          {tech.icon && (
+            <span class="flex items-center justify-center" aria-hidden="true">
+              {tech.icon === "zustand" ? (
+                <Zustand class="size-[15px] grayscale" />
+              ) : (
+                <SimpleIcon icon={tech.icon} />
+              )}
+            </span>
+          )}
+          {tech.name}
+        </li>
+      ))
+    }
+  </ul>
   <div class="flex gap-4 text-sm">
     <a
       href={repo}
       rel="noreferrer"
       target="_blank"
+      aria-label={`View ${title} source code on GitHub`}
       class="text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
     >
       GitHub
     </a>
-    {website && (
-      <a
-        href={website}
-        rel="noreferrer"
-        target="_blank"
-        class="text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
-      >
-        Live Demo
-      </a>
-    )}
+    {
+      website && (
+        <a
+          href={website}
+          rel="noreferrer"
+          target="_blank"
+          aria-label={`View ${title} live demo`}
+          class="text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+        >
+          Live Demo
+        </a>
+      )
+    }
   </div>
 </article>
-
