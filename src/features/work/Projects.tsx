@@ -1,6 +1,6 @@
+import { ProjectItem } from "@/features/work/project-item";
 import { SimpleIcon } from "components/icons/simple-icon";
 import { Zustand } from "components/icons/zustand";
-import { ProjectItem } from "features/work/ProjectItem";
 import type { ReactNode } from "react";
 import {
   siBun,

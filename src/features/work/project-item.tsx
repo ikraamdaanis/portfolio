@@ -1,5 +1,5 @@
 import { ImageViewer } from "@/components/image-viewer";
-import type { Project } from "features/work/Projects";
+import type { Project } from "@/features/work/projects";
 
 export function ProjectItem({
   project: {

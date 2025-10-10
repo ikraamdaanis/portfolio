@@ -2,10 +2,10 @@ import { type SVGProps } from "react";
 import { cn } from "utils/cn";
 
 /** Sophos logo in SVG format. */
-export const Sophos = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
+export function Sophos({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <span className="relative">
-      <span className="absolute left-1/2 top-1/2 z-0 size-[10px] -translate-x-1/2 -translate-y-1/2 bg-white" />
+      <span className="absolute top-1/2 left-1/2 z-0 size-[10px] -translate-x-1/2 -translate-y-1/2 bg-white" />
       <svg
         height="16"
         viewBox="0 0 16 16"
@@ -22,4 +22,4 @@ export const Sophos = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
       </svg>
     </span>
   );
-};
+}

@@ -1,14 +1,13 @@
 ---
-import { Hero } from "components/Hero";
-import { Projects } from "features/work/Projects";
+import { Projects } from "@/features/work/projects";
+import { Hero } from "components/hero";
 import "global.css";
-import Layout from "layouts/Layout.astro";
+import Layout from "layouts/layout.astro";
 ---
 
 <Layout title="Ikraam | Software Engineer">
   <main>
     <Hero client:only/>
     <Projects client:only/>
-
   </main>
 </Layout>
