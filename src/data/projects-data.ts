@@ -18,12 +18,12 @@ import {
   siTailwindcss
 } from "simple-icons";
 
-export interface Technology {
+type Technology = {
   name: string;
   icon?: SimpleIcon | "zustand";
-}
+};
 
-export interface Project {
+export type Project = {
   title: string;
   description1: string;
   description2: string;
@@ -33,7 +33,7 @@ export interface Project {
   website: string;
   image1: ImageMetadata;
   image2: ImageMetadata;
-}
+};
 
 export const projects: Project[] = [
   {

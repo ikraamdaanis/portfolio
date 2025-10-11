@@ -32,13 +32,6 @@ const eslintConfig = [
           ignoreRestSiblings: true
         }
       ]
-      // "filenames-simple/naming-convention": [
-      //   "error",
-      //   {
-      //     rule: "kebab-case",
-      //     excepts: ["index"]
-      //   }
-      // ]
     }
   }
 ];

@@ -1,0 +1,46 @@
+---
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === "/portfolio" || currentPath === "/portfolio/";
+const isAbout = currentPath.includes("/about");
+---
+
+<nav
+  class="fixed left-0 right-0 top-0 z-50 backdrop-blur-xs bg-brand/80 border-b border-transparent"
+  transition:name="navbar"
+  transition:animate="none"
+>
+  <div class="mx-auto max-w-2xl p-4">
+    <div class="flex items-center justify-between">
+      <a
+        href="/portfolio"
+        class="text-lg text-neutral-900 hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300 font-corinthia tracking-tighter"
+      >
+        Ikraam Daanis
+      </a>
+      <div class="flex items-center gap-6 text-sm">
+        <a
+          href="/portfolio"
+          class:list={[
+            "relative transition-colors",
+            isHome
+              ? "text-neutral-900 dark:text-neutral-100 font-semibold"
+              : "text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+          ]}
+        >
+          Home
+        </a>
+        <a
+          href="/portfolio/about"
+          class:list={[
+            "relative transition-colors",
+            isAbout
+              ? "text-neutral-900 dark:text-neutral-100 font-semibold"
+              : "text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+          ]}
+        >
+          About
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

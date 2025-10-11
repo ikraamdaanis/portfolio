@@ -1,10 +1,10 @@
 ---
 import type { SimpleIcon } from "simple-icons";
 
-interface Props {
+type Props = {
   icon: SimpleIcon;
   class?: string;
-}
+};
 
 const { icon, class: className = "size-4" } = Astro.props;
 ---
@@ -19,4 +19,3 @@ const { icon, class: className = "size-4" } = Astro.props;
   <title>{icon.title}</title>
   <path d={icon.path}></path>
 </svg>
-

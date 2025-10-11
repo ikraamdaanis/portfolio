@@ -4,10 +4,10 @@ import SimpleIcon from "components/icons/simple-icon.astro";
 import Zustand from "components/icons/zustand.astro";
 import type { Project } from "data/projects-data";
 
-interface Props {
+type Props = {
   project: Project;
   isFirst?: boolean;
-}
+};
 
 const { project, isFirst = false } = Astro.props;
 const {

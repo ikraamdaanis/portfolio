@@ -1,31 +1,45 @@
 ---
-import '@fontsource-variable/stix-two-text';
-
-interface Props {
+import "@fontsource-variable/stix-two-text";
+import { ClientRouter } from "astro:transitions";
+import Footer from "components/footer.astro";
+import Navbar from "components/navbar.astro";
+type Props = {
   title: string;
-}
-
+};
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="antialiased bg-brand text-text-color font-family">
-  <head >
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico" />
-    <link rel="icon" type="image/png" href="/portfolio/favicon-96x96.png?v=2" sizes="96x96" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/portfolio/favicon-96x96.png?v=2"
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
     <link rel="shortcut icon" href="/portfolio/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/portfolio/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/portfolio/apple-touch-icon.png"
+    />
     <meta name="apple-mobile-web-app-title" content="Ikraam" />
     <link rel="manifest" href="/portfolio/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="flex flex-col min-h-screen">
+    <Navbar />
+    <main class="pt-[60px] flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <ClientRouter />
   </body>
 </html>
-
