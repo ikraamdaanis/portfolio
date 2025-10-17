@@ -1,4 +1,5 @@
 ---
+import { Button } from "components/button";
 import Github from "components/icons/github.astro";
 import LinkedIn from "components/icons/linkedin.astro";
 import X from "components/icons/x.astro";
@@ -14,21 +15,36 @@ import Layout from "layouts/main-layout.astro";
     class="mx-auto relative max-w-2xl px-4 pt-16 pb-16 text-[17px] flex flex-col gap-6"
   >
     <h1 class="text-4xl leading-tight tracking-tight">
-      From concept to production, thoughtfully built
+      from concept to production, thoughtfully built
     </h1>
+    <p class="text-zinc-400 font-normal">
+      ikraam daanis | <a
+        href="https://x.com/ikraamdev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline hover:text-highlight transition hover:decoration-1 underline-offset-[2.5px]"
+        >@ikraamdev</a
+      > | from London 🇬🇧, based in UAE 🇦🇪
+    </p>
     <p>
       I've spent years building full-stack applications for hundreds of
       thousands of users. My approach is simple: understand the problem, write
       maintainable code, and ship products that perform. TypeScript, React.js,
-      Next.js are just tools. What matters is creating something valuable.
-      <b class="text-highlight font-semibold">Impactful.</b>
+      Next.js are just tools. What matters is creating something valuable and
+      <b class="text-highlight font-semibold">impactful.</b>
     </p>
     <p>
       Let's build something exceptional. <a
         href="/portfolio/contact"
         class="underline hover:opacity-80 transition-opacity decoration-1 underline-offset-[2.5px]"
-        >Reach out</a
-      > or check out my social links below.
+        >get in touch</a
+      > or <a
+        href="https://cal.com/ikraam"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline hover:opacity-80 transition-opacity decoration-1 underline-offset-[2.5px]"
+        >book a call</a
+      >
     </p>
     <div class="flex items-center gap-4 justify-between w-full">
       <div class="flex gap-6 items-center" aria-label="Contact">
@@ -53,11 +69,7 @@ import Layout from "layouts/main-layout.astro";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="hover:text-[#0967C2] transition relative group"
         >
-          <span
-            class="absolute inset-0 z-[-1] bg-transparent rounded-sm group-hover:bg-white transition-colors"
-          ></span>
           <LinkedIn class="size-5 z-10" aria-hidden="true" />
         </a>
       </div>
@@ -65,12 +77,9 @@ import Layout from "layouts/main-layout.astro";
         href="https://cal.com/ikraam"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Book a call"
       >
-        <button
-          class="bg-black/90 hover:brightness-110 transition px-2 cursor-pointer py-1 rounded-md text-sm"
-          style="color: white;"
-          >Book a call
-        </button>
+        <Button className="h-8">Book a call</Button>
       </a>
     </div>
   </section>

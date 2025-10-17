@@ -102,7 +102,7 @@ export const projects: Project[] = [
       {
         name: "Bun",
         icon: "bun",
-        bg: "#1a1512",
+        bg: "#2e2a24",
         text: "#FFFFFF",
         iconColor: "#FBF0DF"
       }
