@@ -9,7 +9,6 @@ import ReactQuery from "components/icons/react-query.astro";
 import ReactRouter from "components/icons/react-router.astro";
 import React from "components/icons/react.astro";
 import Redux from "components/icons/redux.astro";
-import SimpleIcon from "components/icons/simple-icon.astro";
 import Tailwind from "components/icons/tailwind.astro";
 import Zustand from "components/icons/zustand.astro";
 import type { Project } from "data/projects-data";
@@ -106,27 +105,21 @@ const iconComponents = {
         >
           {tech.icon && (
             <span class="flex items-center justify-center" aria-hidden="true">
-              {typeof tech.icon === "string" ? (
-                (() => {
-                  const IconComponent =
-                    iconComponents[tech.icon as keyof typeof iconComponents];
+              {typeof tech.icon === "string"
+                ? (() => {
+                    const IconComponent =
+                      iconComponents[tech.icon as keyof typeof iconComponents];
 
-                  return IconComponent ? (
-                    <IconComponent.icon
-                      class={IconComponent.class}
-                      style={`color: ${tech.iconColor}`}
-                    />
-                  ) : (
-                    "💅"
-                  );
-                })()
-              ) : (
-                <SimpleIcon
-                  icon={tech.icon}
-                  class="size-4"
-                  style={`color: ${tech.iconColor}`}
-                />
-              )}
+                    return IconComponent ? (
+                      <IconComponent.icon
+                        class={IconComponent.class}
+                        style={`color: ${tech.iconColor}`}
+                      />
+                    ) : (
+                      "💅"
+                    );
+                  })()
+                : null}
             </span>
           )}
           {tech.name}
