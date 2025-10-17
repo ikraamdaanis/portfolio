@@ -2,6 +2,7 @@
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === "/portfolio" || currentPath === "/portfolio/";
 const isAbout = currentPath.includes("/about");
+const isContact = currentPath.includes("/contact");
 ---
 
 <nav
@@ -11,34 +12,25 @@ const isAbout = currentPath.includes("/about");
 >
   <div class="mx-auto max-w-2xl p-4">
     <div class="flex items-center justify-between">
-      <a
-        href="/portfolio"
-        class="text-lg text-neutral-900 hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300 font-corinthia tracking-tighter"
-      >
-        Ikraam Daanis
-      </a>
+      <a href="/portfolio" class="text-xl tracking-tight"> ikraam </a>
       <div class="flex items-center gap-6 text-sm">
         <a
           href="/portfolio"
-          class:list={[
-            "relative transition-colors",
-            isHome
-              ? "text-neutral-900 dark:text-neutral-100 font-semibold"
-              : "text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
-          ]}
+          class:list={["relative transition-opacity hover:opacity-80"]}
         >
-          Home
+          home
         </a>
         <a
           href="/portfolio/about"
-          class:list={[
-            "relative transition-colors",
-            isAbout
-              ? "text-neutral-900 dark:text-neutral-100 font-semibold"
-              : "text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
-          ]}
+          class:list={["relative transition-opacity hover:opacity-80"]}
         >
-          About
+          about
+        </a>
+        <a
+          href="/portfolio/contact"
+          class:list={["relative transition-opacity hover:opacity-80"]}
+        >
+          contact
         </a>
       </div>
     </div>

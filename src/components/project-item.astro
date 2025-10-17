@@ -1,6 +1,16 @@
 ---
 import { Image } from "astro:assets";
+import Bun from "components/icons/bun.astro";
+import Firebase from "components/icons/firebase.astro";
+import Nextjs from "components/icons/nextjs.astro";
+import Postgres from "components/icons/postgres.astro";
+import Prisma from "components/icons/prisma.astro";
+import ReactQuery from "components/icons/react-query.astro";
+import ReactRouter from "components/icons/react-router.astro";
+import React from "components/icons/react.astro";
+import Redux from "components/icons/redux.astro";
 import SimpleIcon from "components/icons/simple-icon.astro";
+import Tailwind from "components/icons/tailwind.astro";
 import Zustand from "components/icons/zustand.astro";
 import type { Project } from "data/projects-data";
 
@@ -20,10 +30,57 @@ const {
   website,
   image1
 } = project;
+
+const iconComponents = {
+  zustand: {
+    icon: Zustand,
+    class: "size-[15px]"
+  },
+  nextjs: {
+    icon: Nextjs,
+    class: "size-4 translate-y-0.5"
+  },
+  "react-query": {
+    icon: ReactQuery,
+    class: "size-4"
+  },
+  firebase: {
+    icon: Firebase,
+    class: "size-4"
+  },
+  "react-router": {
+    icon: ReactRouter,
+    class: "size-4"
+  },
+  react: {
+    icon: React,
+    class: "size-4"
+  },
+  postgres: {
+    icon: Postgres,
+    class: "size-4"
+  },
+  prisma: {
+    icon: Prisma,
+    class: "size-3.5 fill-white"
+  },
+  bun: {
+    icon: Bun,
+    class: "size-4"
+  },
+  tailwind: {
+    icon: Tailwind,
+    class: "size-4"
+  },
+  redux: {
+    icon: Redux,
+    class: "size-4"
+  }
+};
 ---
 
 <article>
-  <h3 class="text-xl font-medium">{title}</h3>
+  <h3 class="text-xl">{title}</h3>
   <div class="relative mt-2 mb-4 aspect-[16/10] overflow-hidden rounded-[2px]">
     <Image
       src={image1}
@@ -43,13 +100,32 @@ const {
   <ul class="mb-3 flex flex-wrap gap-2">
     {
       [...list1, ...list2].map(tech => (
-        <li class="flex items-center gap-1.5 rounded-md bg-neutral-100 px-2 py-1 text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+        <li
+          class="flex items-center gap-1.5 rounded-md px-2 py-1 text-sm"
+          style={`background-color: ${tech.bg}; color: ${tech.text}`}
+        >
           {tech.icon && (
             <span class="flex items-center justify-center" aria-hidden="true">
-              {tech.icon === "zustand" ? (
-                <Zustand class="size-[15px] grayscale" />
+              {typeof tech.icon === "string" ? (
+                (() => {
+                  const IconComponent =
+                    iconComponents[tech.icon as keyof typeof iconComponents];
+
+                  return IconComponent ? (
+                    <IconComponent.icon
+                      class={IconComponent.class}
+                      style={`color: ${tech.iconColor}`}
+                    />
+                  ) : (
+                    "💅"
+                  );
+                })()
               ) : (
-                <SimpleIcon icon={tech.icon} />
+                <SimpleIcon
+                  icon={tech.icon}
+                  class="size-4"
+                  style={`color: ${tech.iconColor}`}
+                />
               )}
             </span>
           )}
@@ -64,7 +140,7 @@ const {
       rel="noreferrer"
       target="_blank"
       aria-label={`View ${title} source code on GitHub`}
-      class="text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+      class="underline hover:opacity-80 transition-opacity"
     >
       GitHub
     </a>
@@ -75,7 +151,7 @@ const {
           rel="noreferrer"
           target="_blank"
           aria-label={`View ${title} live demo`}
-          class="text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+          class="underline hover:opacity-80 transition-opacity"
         >
           Live Demo
         </a>

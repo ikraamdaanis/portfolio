@@ -1,21 +1,29 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-html {
-  scrollbar-gutter: stable;
-}
+@source "../**/*.{js,ts,jsx,tsx}";
 
 @theme {
-  --color-brand: #faf9f5;
-  --color-text-color: #171717;
+  /* --color-brand: #faf9f5; */
+  --color-brand: hsl(0 0% 9.5%);
+  /* --color-text-color: #171717; */
+  --color-text-color: #faf9f5;
   --color-text-white: #eeeeee;
-  --color-highlight: #ecafaa;
+  --color-highlight: #dd6160;
 
   --font-family: "STIX Two Text", sans-serif;
   --font-corinthia: "Corinthia", cursive;
+  --font-geist: "Geist", sans-serif;
+  --font-playfair-display: "Playfair Display", serif;
 
   --text-text-size: 17px;
+}
+
+html {
+  scrollbar-gutter: stable;
+  font-family: var(--font-geist);
 }
 
 *::-moz-selection {
