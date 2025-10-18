@@ -52,30 +52,13 @@ const {
 </html>
 
 <script is:inline>
-  // Prevent view transition flash on page reload by disabling transitions on initial load
-  let isInitialLoad =
-    !("navigation" in window) ||
-    performance.getEntriesByType("navigation")[0]?.type === "reload";
+  document.documentElement.style.visibility = "hidden";
+</script>
 
-  if (isInitialLoad) {
-    document.addEventListener("astro:before-preparation", () => {
-      const style = document.createElement("style");
-      style.id = "disable-initial-transition";
-      style.textContent = `
-        ::view-transition-group(*),
-        ::view-transition-old(*),
-        ::view-transition-new(*) {
-          animation-duration: 0ms !important;
-        }
-      `;
-      document.head.appendChild(style);
+<script>
+  document.addEventListener("astro:page-load", () => {
+    requestAnimationFrame(() => {
+      document.documentElement.style.visibility = "visible";
     });
-
-    document.addEventListener("astro:page-load", () => {
-      requestAnimationFrame(() => {
-        document.getElementById("disable-initial-transition")?.remove();
-        isInitialLoad = false;
-      });
-    });
-  }
+  });
 </script>
