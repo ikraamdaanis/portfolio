@@ -1,3 +1,13 @@
+---
+const currentPage = Astro.url.pathname;
+
+const pages = [
+  { href: "", label: "home" },
+  { href: "/about", label: "about" },
+  { href: "/contact", label: "contact" }
+];
+---
+
 <nav
   class="fixed left-0 right-0 top-0 z-50 backdrop-blur-xs bg-brand/80 border-b border-transparent"
   transition:name="navbar"
@@ -5,23 +15,32 @@
 >
   <div class="mx-auto max-w-2xl p-4">
     <div class="flex items-center justify-between">
-      <a href="/portfolio" class="text-xl tracking-tight"> ikraam </a>
+      <a href="/" class="text-xl tracking-tight"> ikraam </a>
       <div class="flex items-center gap-6 text-sm">
         <a
-          href="/portfolio"
-          class:list={["relative transition-opacity hover:opacity-80"]}
+          href="/"
+          class:list={[
+            "relative transition-opacity hover:opacity-80 select-none",
+            currentPage === "/" && "opacity-100 pointer-events-none"
+          ]}
         >
           home
         </a>
         <a
-          href="/portfolio/about"
-          class:list={["relative transition-opacity hover:opacity-80"]}
+          href="/about"
+          class:list={[
+            "relative transition-opacity hover:opacity-80 select-none",
+            currentPage === "/about" && "opacity-100 pointer-events-none"
+          ]}
         >
           about
         </a>
         <a
-          href="/portfolio/contact"
-          class:list={["relative transition-opacity hover:opacity-80"]}
+          href="/contact"
+          class:list={[
+            "relative transition-opacity hover:opacity-80 select-none",
+            currentPage === "/contact" && "opacity-100 pointer-events-none"
+          ]}
         >
           contact
         </a>
