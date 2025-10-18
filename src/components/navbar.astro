@@ -18,7 +18,7 @@ const currentPage = Astro.url.pathname;
           data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
-            currentPage === "/" && "opacity-100 pointer-events-none"
+            currentPage === "/" && "opacity-100"
           ]}
         >
           home
@@ -28,7 +28,7 @@ const currentPage = Astro.url.pathname;
           data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
-            currentPage === "/about" && "opacity-100 pointer-events-none"
+            currentPage.includes("/about") && "opacity-100"
           ]}
         >
           about
@@ -38,7 +38,7 @@ const currentPage = Astro.url.pathname;
           data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
-            currentPage === "/contact" && "opacity-100 pointer-events-none"
+            currentPage.includes("/contact") && "opacity-100"
           ]}
         >
           contact
