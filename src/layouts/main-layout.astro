@@ -45,3 +45,15 @@ const { title } = Astro.props;
     <ClientRouter />
   </body>
 </html>
+
+<script is:inline>
+  document.documentElement.style.visibility = "hidden";
+</script>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    requestAnimationFrame(() => {
+      document.documentElement.style.visibility = "visible";
+    });
+  });
+</script>
