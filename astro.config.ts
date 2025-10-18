@@ -9,6 +9,8 @@ export default defineConfig({
   integrations: [react()],
   adapter: cloudflare(),
   vite: {
+    // @ts-expect-error - Vite plugin type mismatch between
+    // Astro's bundled version and direct dependency
     plugins: [tailwindcss()]
   }
 });
