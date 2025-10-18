@@ -1,6 +1,5 @@
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
-import filenamesSimple from "eslint-plugin-filenames-simple";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 
 const eslintConfig = [
@@ -11,8 +10,7 @@ const eslintConfig = [
     },
     plugins: {
       "@typescript-eslint": tsPlugin,
-      "no-relative-import-paths": noRelativeImportPaths,
-      "filenames-simple": filenamesSimple
+      "no-relative-import-paths": noRelativeImportPaths
     },
     rules: {
       "no-relative-import-paths/no-relative-import-paths": "error",
