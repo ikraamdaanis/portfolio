@@ -6,9 +6,9 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://ikraamdaanis.github.io",
   base: "portfolio",
+  integrations: [react()],
+  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()]
-  },
-  integrations: [react()],
-  adapter: cloudflare()
+  }
 });
