@@ -15,10 +15,7 @@
   --color-brand-top: #df6969;
   --color-brand-bottom: #d84847;
 
-  --font-family: "STIX Two Text", sans-serif;
-  --font-corinthia: "Corinthia", cursive;
   --font-geist: "Geist", sans-serif;
-  --font-playfair-display: "Playfair Display", serif;
 
   --text-text-size: 17px;
 }
@@ -40,12 +37,21 @@ html {
   -webkit-text-fill-color: var(--color-text-white);
 }
 
-::view-transition-old(root) {
-  animation: fadeSlideDown 200ms ease-out;
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: fadeSlideDown 150ms ease-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: fadeSlideUp 150ms ease-out;
+  }
 }
 
-::view-transition-new(root) {
-  animation: fadeSlideUp 250ms ease-out;
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }
 
 @keyframes fadeSlideUp {

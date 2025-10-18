@@ -9,10 +9,13 @@ const currentPage = Astro.url.pathname;
 >
   <div class="mx-auto max-w-2xl p-4">
     <div class="flex items-center justify-between">
-      <a href="/" class="text-xl tracking-tight"> ikraam </a>
+      <a href="/" class="text-xl tracking-tight" data-astro-prefetch>
+        ikraam
+      </a>
       <div class="flex items-center gap-6 text-sm">
         <a
           href="/"
+          data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
             currentPage === "/" && "opacity-100 pointer-events-none"
@@ -22,6 +25,7 @@ const currentPage = Astro.url.pathname;
         </a>
         <a
           href="/about"
+          data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
             currentPage === "/about" && "opacity-100 pointer-events-none"
@@ -31,6 +35,7 @@ const currentPage = Astro.url.pathname;
         </a>
         <a
           href="/contact"
+          data-astro-prefetch
           class:list={[
             "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
             currentPage === "/contact" && "opacity-100 pointer-events-none"

@@ -8,9 +8,6 @@
         "@astrojs/cloudflare": "^12.6.10",
         "@astrojs/react": "^4.4.0",
         "@fontsource-variable/geist": "^5.2.8",
-        "@fontsource-variable/playfair-display": "^5.2.8",
-        "@fontsource-variable/stix-two-text": "^5.2.8",
-        "@fontsource/corinthia": "^5.2.8",
         "@formspree/react": "^3.0.0",
         "@tailwindcss/vite": "^4.1.14",
         "astro": "5.14.6",
@@ -202,12 +199,6 @@
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.4.0", "", { "dependencies": { "@eslint/core": "^0.16.0", "levn": "^0.4.1" } }, "sha512-sB5uyeq+dwCWyPi31B2gQlVlo+j5brPlWx4yZBrEaRo/nhdDE8Xke1gsGgtiBdaBTxuTkceLVuVt/pclrasb0A=="],
 
     "@fontsource-variable/geist": ["@fontsource-variable/geist@5.2.8", "", {}, "sha512-cJ6m9e+8MQ5dCYJsLylfZrgBh6KkG4bOLckB35Tr9J/EqdkEM6QllH5PxqP1dhTvFup+HtMRPuz9xOjxXJggxw=="],
-
-    "@fontsource-variable/playfair-display": ["@fontsource-variable/playfair-display@5.2.8", "", {}, "sha512-ZzVIXPOrL85yyOvZYoBzUszIJM+xKkHqni4IYn2CVLaGQQdJR8sBeC8yFNgjxSJ7ludTwta8qpULeOFuk5X75A=="],
-
-    "@fontsource-variable/stix-two-text": ["@fontsource-variable/stix-two-text@5.2.8", "", {}, "sha512-UnQRchIkLaHqlt7/Vib2E83lAwPAtzuOXtGlPYx1sy+VJ4FcFC1u9C4ZikicplKvH9EKPuGJypnwh5yjLKjZ8A=="],
-
-    "@fontsource/corinthia": ["@fontsource/corinthia@5.2.8", "", {}, "sha512-epTXpsne1Ko+UvaAMkgxhsJJ2Pa9zeqD5axZe91CsQuRjsoZmQiGdkzGwnIlvS1wSr+6U3jYYIY9NZoqy2f8qQ=="],
 
     "@formspree/core": ["@formspree/core@4.0.0", "", { "dependencies": { "@stripe/stripe-js": "^5.7.0" } }, "sha512-geNlUut5nME1Ztej5Pzx1BrlQ1fFIcJYIqmF+Vm0jaUbpZxjXvt7SDOGeQVkuxn80QJiIHlwBGGjSBFjPX/KDw=="],
 

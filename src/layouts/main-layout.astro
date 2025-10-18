@@ -1,22 +1,31 @@
 ---
-import "@fontsource-variable/stix-two-text";
 import { ClientRouter } from "astro:transitions";
 import Footer from "components/footer.astro";
 import Navbar from "components/navbar.astro";
 
 type Props = {
   title: string;
+  description?: string;
 };
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Full-stack software engineer specializing in TypeScript, React.js, and Next.js. Building scalable, performant web applications."
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="antialiased bg-brand text-text-color">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="hsl(0 0% 7%)" />
+    <link rel="dns-prefetch" href="https://cal.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+    <link rel="dns-prefetch" href="https://x.com" />
+    <link rel="dns-prefetch" href="https://linkedin.com" />
+    <link rel="preconnect" href="https://formspree.io" crossorigin />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link
       rel="icon"
@@ -43,13 +52,30 @@ const { title } = Astro.props;
 </html>
 
 <script is:inline>
-  document.documentElement.style.visibility = "hidden";
-</script>
+  // Prevent view transition flash on page reload by disabling transitions on initial load
+  let isInitialLoad =
+    !("navigation" in window) ||
+    performance.getEntriesByType("navigation")[0]?.type === "reload";
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    requestAnimationFrame(() => {
-      document.documentElement.style.visibility = "visible";
+  if (isInitialLoad) {
+    document.addEventListener("astro:before-preparation", () => {
+      const style = document.createElement("style");
+      style.id = "disable-initial-transition";
+      style.textContent = `
+        ::view-transition-group(*),
+        ::view-transition-old(*),
+        ::view-transition-new(*) {
+          animation-duration: 0ms !important;
+        }
+      `;
+      document.head.appendChild(style);
     });
-  });
+
+    document.addEventListener("astro:page-load", () => {
+      requestAnimationFrame(() => {
+        document.getElementById("disable-initial-transition")?.remove();
+        isInitialLoad = false;
+      });
+    });
+  }
 </script>
