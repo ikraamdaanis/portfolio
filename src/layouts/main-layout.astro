@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import Footer from "components/footer.astro";
 import Navbar from "components/navbar.astro";
 import SEO from "components/seo.astro";
+import Schema from "components/schema.astro";
 
 interface Props {
   title?: string;
@@ -11,16 +12,36 @@ interface Props {
   type?: "website" | "article";
 }
 
-const { title, description, image, type } = Astro.props;
+const {
+  title = "ikraam | software engineer",
+  description = "full-stack software engineer specializing in typescript, react.js, and next.js. building scalable, performant web applications",
+  image = "/og-image.png",
+  type = "website"
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "ikraam",
+  url: Astro.site,
+  jobTitle: "Software Engineer",
+  description
+};
 ---
 
-<!doctype html>
+---
+
 <html lang="en" class="bg-brand text-text-color antialiased">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="hsl(0 0% 7%)" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    />
     <link rel="dns-prefetch" href="https://cal.com" />
     <link rel="dns-prefetch" href="https://github.com" />
     <link rel="dns-prefetch" href="https://x.com" />
@@ -36,10 +57,10 @@ const { title, description, image, type } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Ikraam" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
     <SEO title={title} description={description} image={image} type={type} />
+    <Schema schema={schema} />
   </head>
   <body class="flex min-h-screen flex-col">
     <Navbar />
