@@ -2,20 +2,20 @@
 import { ClientRouter } from "astro:transitions";
 import Footer from "components/footer.astro";
 import Navbar from "components/navbar.astro";
+import SEO from "components/seo.astro";
 
-type Props = {
-  title: string;
+interface Props {
+  title?: string;
   description?: string;
-};
+  image?: string;
+  type?: "website" | "article";
+}
 
-const {
-  title,
-  description = "Full-stack software engineer specializing in TypeScript, React.js, and Next.js. Building scalable, performant web applications."
-} = Astro.props;
+const { title, description, image, type } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="antialiased bg-brand text-text-color">
+<html lang="en" class="bg-brand text-text-color antialiased">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -39,11 +39,11 @@ const {
     <meta name="apple-mobile-web-app-title" content="Ikraam" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO title={title} description={description} image={image} type={type} />
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex min-h-screen flex-col">
     <Navbar />
-    <main class="pt-[60px] flex-1">
+    <main class="flex-1 pt-[60px]">
       <slot />
     </main>
     <Footer />
