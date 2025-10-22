@@ -57,9 +57,7 @@ const schema = {
     <Schema schema={schema} />
     <ClientRouter />
   </head>
-  <body
-    class="scroller flex max-h-[calc(100vh-60px)] min-h-screen flex-1 flex-col overflow-y-auto pt-[60px]"
-  >
+  <body class="auto-hide-scrollbar flex min-h-screen flex-1 flex-col pt-[60px]">
     <Navbar />
     <main class="flex-1">
       <slot />
@@ -67,3 +65,15 @@ const schema = {
     <Footer />
   </body>
 </html>
+
+<script is:inline>
+  document.documentElement.style.visibility = "hidden";
+</script>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    requestAnimationFrame(() => {
+      document.documentElement.style.visibility = "visible";
+    });
+  });
+</script>
