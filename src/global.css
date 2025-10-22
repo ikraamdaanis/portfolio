@@ -36,3 +36,22 @@ html {
   background: var(--color-highlight);
   -webkit-text-fill-color: var(--color-text-white);
 }
+
+.scroller::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  /* border-radius: 8px; */
+  background: #232222;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #4c4747;
+  border-radius: 8px;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0s;
+}

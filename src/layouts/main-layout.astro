@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import Footer from "components/footer.astro";
 import Navbar from "components/navbar.astro";
 import Schema from "components/schema.astro";
@@ -54,10 +55,13 @@ const schema = {
     <link rel="manifest" href="/site.webmanifest" />
     <SEO title={title} description={description} image={image} type={type} />
     <Schema schema={schema} />
+    <ClientRouter />
   </head>
-  <body class="flex min-h-screen flex-col">
+  <body
+    class="scroller flex max-h-[calc(100vh-60px)] min-h-screen flex-1 flex-col overflow-y-auto pt-[60px]"
+  >
     <Navbar />
-    <main class="flex-1 pt-[60px]">
+    <main class="flex-1">
       <slot />
     </main>
     <Footer />
