@@ -1,9 +1,8 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import Footer from "components/footer.astro";
 import Navbar from "components/navbar.astro";
-import SEO from "components/seo.astro";
 import Schema from "components/schema.astro";
+import SEO from "components/seo.astro";
 
 interface Props {
   title?: string;
@@ -62,18 +61,5 @@ const schema = {
       <slot />
     </main>
     <Footer />
-    <ClientRouter />
   </body>
 </html>
-
-<script is:inline>
-  document.documentElement.style.visibility = "hidden";
-</script>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    requestAnimationFrame(() => {
-      document.documentElement.style.visibility = "visible";
-    });
-  });
-</script>

@@ -14,8 +14,7 @@ export default defineConfig({
     }
   },
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "viewport"
+    prefetchAll: true
   },
   inlineStylesheets: "auto",
   vite: {

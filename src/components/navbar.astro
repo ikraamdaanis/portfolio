@@ -3,7 +3,7 @@ const currentPage = Astro.url.pathname;
 ---
 
 <nav
-  class="fixed left-0 right-0 top-0 z-50 backdrop-blur-xs bg-brand/80 border-b border-transparent"
+  class="bg-brand/80 fixed top-0 right-0 left-0 z-50 border-b border-transparent backdrop-blur-xs"
   transition:name="navbar"
   transition:animate="none"
 >
@@ -17,7 +17,7 @@ const currentPage = Astro.url.pathname;
           href="/"
           data-astro-prefetch
           class:list={[
-            "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
+            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
             currentPage === "/" && "opacity-100"
           ]}
         >
@@ -27,7 +27,7 @@ const currentPage = Astro.url.pathname;
           href="/about"
           data-astro-prefetch
           class:list={[
-            "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
+            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
             currentPage.includes("/about") && "opacity-100"
           ]}
         >
@@ -37,7 +37,7 @@ const currentPage = Astro.url.pathname;
           href="/contact"
           data-astro-prefetch
           class:list={[
-            "relative transition-opacity opacity-60 hover:opacity-100 hover:brightness-110 select-none",
+            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
             currentPage.includes("/contact") && "opacity-100"
           ]}
         >
