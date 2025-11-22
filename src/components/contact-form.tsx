@@ -12,9 +12,12 @@ export function ContactForm() {
   return (
     <>
       {state.succeeded && (
-        <div className="rounded-md border border-green-700 bg-green-950 px-4 py-2">
+        <div className="rounded-md border border-green-700/50 bg-green-950/50 px-4 py-3 backdrop-blur-sm">
           <p className="text-sm font-medium text-green-100">
             Thanks! I'll get back to you soon 🚀
+          </p>
+          <p className="mt-1 text-xs text-green-200/80">
+            Your message has been sent successfully.
           </p>
         </div>
       )}
@@ -27,6 +30,14 @@ export function ContactForm() {
         </div>
       ))}
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="bot-field"
+          tabIndex={-1}
+          autoComplete="off"
+          className="sr-only"
+          aria-hidden="true"
+        />
         <div className="flex flex-col gap-1">
           <Label htmlFor="name" className="text-sm font-medium">
             name
@@ -70,7 +81,7 @@ export function ContactForm() {
           />
         </div>
         <Button type="submit" disabled={state.submitting}>
-          {state.submitting ? "sending..." : "send message"}
+          {state.submitting ? "sending..." : "Send message"}
         </Button>
       </form>
     </>

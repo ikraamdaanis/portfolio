@@ -12,41 +12,32 @@ import Layout from "layouts/main-layout.astro";
 <Layout title="ikraam | software engineer">
   <section
     aria-label="Introduction"
-    class="relative mx-auto flex max-w-2xl flex-col gap-6 px-4 pt-16 pb-16 text-[17px]"
+    class="relative mx-auto flex max-w-2xl flex-col gap-6 px-4 pt-16 pb-24 text-[17px]"
   >
     <h1 class="text-4xl leading-tight tracking-tight">
-      from concept to production, thoughtfully built
+      Full-stack engineer building products that scale
     </h1>
     <p class="font-normal text-zinc-400">
-      ikraam daanis | <a
+      Ikraam Daanis | <a
         href="https://x.com/ikraamdaanis"
         target="_blank"
         rel="noopener noreferrer"
         class="hover:text-highlight underline-offset-[2.5px] transition hover:underline hover:decoration-1"
         >@ikraamdaanis</a
-      > | from london 🇬🇧, based in uae 🇦🇪
-    </p>
-    <p>
-      I've spent years building full-stack applications for hundreds of
-      thousands of users. My approach is simple: understand the problem, write
-      maintainable code, and ship products that perform. TypeScript, React.js,
-      Next.js are just tools. What matters is creating something valuable and
-      <b class="text-highlight font-semibold">impactful.</b>
-    </p>
-    <p>
-      Let's build something exceptional. <a
-        href="/contact"
-        class="underline decoration-1 underline-offset-[2.5px] transition-opacity hover:opacity-80"
-        data-astro-prefetch>get in touch</a
-      > or <a
-        href="https://cal.com/ikraam"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="underline decoration-1 underline-offset-[2.5px] transition-opacity hover:opacity-80"
-        >book a call</a
       >
     </p>
-    <div class="flex w-full items-center justify-between gap-4">
+    <p>
+      I've built full-stack applications serving hundreds of thousands of users
+      for companies like Cloudline, Sophos, and Pembee. I specialize in React,
+      Next.js, and TypeScript, delivering maintainable code, optimized
+      performance, and products that <b class="text-highlight font-semibold"
+        >innovate.</b
+      >
+    </p>
+    <p>Available for freelance projects. Let's discuss your next build.</p>
+    <div
+      class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+    >
       <div class="flex items-center gap-6" aria-label="Contact">
         <a
           href="https://github.com/ikraamdaanis"
@@ -73,19 +64,93 @@ import Layout from "layouts/main-layout.astro";
           <LinkedIn class="z-10 size-5" aria-hidden="true" />
         </a>
       </div>
-      <a
-        href="https://cal.com/ikraam"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Book a call"
-      >
-        <Button className="h-8">Book a call</Button>
-      </a>
+      <div class="flex gap-3">
+        <a
+          href="#projects"
+          class="rounded-md border border-zinc-800 px-4 py-2 text-center text-sm font-medium transition hover:border-zinc-700 hover:bg-zinc-900/50"
+          data-astro-prefetch
+        >
+          View work
+        </a>
+        <a
+          href="https://cal.com/ikraam"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Book a call"
+        >
+          <Button className="h-10">Book a call</Button>
+        </a>
+      </div>
     </div>
   </section>
-  <section aria-label="Projects" class="mx-auto max-w-2xl px-4 pb-24">
+  <section aria-label="Services" class="mx-auto max-w-2xl px-4 pt-8 pb-24">
+    <h2 class="mb-4 text-2xl">Services</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      <div
+        class="rounded-md border border-zinc-800 bg-zinc-900/30 p-6 transition hover:border-zinc-700 hover:bg-zinc-900/50"
+      >
+        <h3 class="mb-2 text-lg font-medium">MVP development</h3>
+        <p class="mb-4 text-sm text-zinc-400">
+          Build your product from concept to launch. Full-stack development with
+          React, Next.js, and modern tooling.
+        </p>
+        <ul class="flex flex-col gap-1 text-xs text-zinc-500">
+          <li>• Rapid prototyping</li>
+          <li>• Production-ready code</li>
+          <li>• Deployment & hosting</li>
+        </ul>
+      </div>
+      <div
+        class="rounded-md border border-zinc-800 bg-zinc-900/30 p-6 transition hover:border-zinc-700 hover:bg-zinc-900/50"
+      >
+        <h3 class="mb-2 text-lg font-medium">Frontend upgrades</h3>
+        <p class="mb-4 text-sm text-zinc-400">
+          Modernize existing applications. Performance optimization, UI/UX
+          improvements, and migration to React/Next.js.
+        </p>
+        <ul class="flex flex-col gap-1 text-xs text-zinc-500">
+          <li>• Performance audits</li>
+          <li>• Component refactoring</li>
+          <li>• Design system integration</li>
+        </ul>
+      </div>
+      <div
+        class="rounded-md border border-zinc-800 bg-zinc-900/30 p-6 transition hover:border-zinc-700 hover:bg-zinc-900/50"
+      >
+        <h3 class="mb-2 text-lg font-medium">Performance & SEO</h3>
+        <p class="mb-4 text-sm text-zinc-400">
+          Optimize load times, Core Web Vitals, and search visibility. Technical
+          SEO audits and implementation.
+        </p>
+        <ul class="flex flex-col gap-1 text-xs text-zinc-500">
+          <li>• Lighthouse optimization</li>
+          <li>• Image & bundle optimization</li>
+          <li>• Meta tags & structured data</li>
+        </ul>
+      </div>
+      <div
+        class="rounded-md border border-zinc-800 bg-zinc-900/30 p-6 transition hover:border-zinc-700 hover:bg-zinc-900/50"
+      >
+        <h3 class="mb-2 text-lg font-medium">Maintenance & support</h3>
+        <p class="mb-4 text-sm text-zinc-400">
+          Ongoing support and feature development. Bug fixes, security updates,
+          and iterative improvements.
+        </p>
+        <ul class="flex flex-col gap-1 text-xs text-zinc-500">
+          <li>• Retainer agreements</li>
+          <li>• Feature development</li>
+          <li>• Security patches</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section
+    id="projects"
+    aria-label="Projects"
+    class="mx-auto max-w-2xl px-4 pb-24"
+  >
     <h2 class="mb-8 text-2xl">Projects</h2>
-    <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-20">
       {
         projects.map((project, index) => (
           <ProjectItem project={project} isFirst={index === 0} />

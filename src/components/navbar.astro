@@ -8,42 +8,43 @@ const currentPage = Astro.url.pathname;
   transition:animate="none"
 >
   <div class="mx-auto max-w-2xl p-4">
-    <div class="flex items-center justify-between">
-      <a href="/" class="text-xl tracking-tight" data-astro-prefetch>
-        ikraam
+    <div class="flex items-center justify-end gap-4 text-sm sm:gap-6">
+      <a
+        href="/"
+        data-astro-prefetch
+        class:list={[
+          "relative transition-opacity select-none hover:opacity-100 hover:brightness-110",
+          currentPage === "/"
+            ? "after:bg-highlight opacity-100 after:absolute after:right-0 after:bottom-[-4px] after:left-0 after:h-[1px]"
+            : "opacity-60"
+        ]}
+      >
+        home
       </a>
-      <div class="flex items-center gap-6 text-sm">
-        <a
-          href="/"
-          data-astro-prefetch
-          class:list={[
-            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
-            currentPage === "/" && "opacity-100"
-          ]}
-        >
-          home
-        </a>
-        <a
-          href="/about"
-          data-astro-prefetch
-          class:list={[
-            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
-            currentPage.includes("/about") && "opacity-100"
-          ]}
-        >
-          about
-        </a>
-        <a
-          href="/contact"
-          data-astro-prefetch
-          class:list={[
-            "relative opacity-60 transition-opacity select-none hover:opacity-100 hover:brightness-110",
-            currentPage.includes("/contact") && "opacity-100"
-          ]}
-        >
-          contact
-        </a>
-      </div>
+      <a
+        href="/about"
+        data-astro-prefetch
+        class:list={[
+          "relative transition-opacity select-none hover:opacity-100 hover:brightness-110",
+          currentPage.includes("/about")
+            ? "after:bg-highlight opacity-100 after:absolute after:right-0 after:bottom-[-4px] after:left-0 after:h-[1px]"
+            : "opacity-60"
+        ]}
+      >
+        about
+      </a>
+      <a
+        href="/contact"
+        data-astro-prefetch
+        class:list={[
+          "relative transition-opacity select-none hover:opacity-100 hover:brightness-110",
+          currentPage.includes("/contact")
+            ? "after:bg-highlight opacity-100 after:absolute after:right-0 after:bottom-[-4px] after:left-0 after:h-[1px]"
+            : "opacity-60"
+        ]}
+      >
+        contact
+      </a>
     </div>
   </div>
 </nav>
