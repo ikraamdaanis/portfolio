@@ -5,7 +5,7 @@ import { Label } from "components/label";
 import { Textarea } from "components/textarea";
 
 export function ContactForm() {
-  const [state, handleSubmit] = useForm("xpwybyga");
+  const [state, handleSubmit] = useForm("contact-form");
 
   const errors = state.errors?.getFormErrors();
 
@@ -40,7 +40,7 @@ export function ContactForm() {
         />
         <div className="flex flex-col gap-1">
           <Label htmlFor="name" className="text-sm font-medium">
-            name
+            Name
           </Label>
           <Input
             type="text"
@@ -55,7 +55,7 @@ export function ContactForm() {
         </div>
         <div className="flex flex-col gap-1">
           <Label htmlFor="email" className="text-sm font-medium">
-            email
+            Email
           </Label>
           <Input
             type="email"
@@ -71,7 +71,7 @@ export function ContactForm() {
         </div>
         <div className="flex flex-col gap-1">
           <Label htmlFor="message" className="text-sm font-medium">
-            message
+            Message
           </Label>
           <Textarea id="message" name="message" required />
           <ValidationError
