@@ -1,0 +1,55 @@
+---
+import { Button } from "components/button";
+import "global.css";
+import Layout from "layouts/main-layout.astro";
+---
+
+<Layout title="404 | page not found">
+  <section
+    class="mx-auto flex flex-col items-center justify-center gap-8 px-4 py-24 text-center"
+    style="min-height: calc(100vh - 160px);"
+  >
+    <div class="relative">
+      <span class="error-glow" aria-hidden="true">404</span>
+      <h1 class="error-code">404</h1>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-text-color text-2xl font-medium">Page not found</p>
+      <p class="text-text-color/80">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+    </div>
+    <a href="/" data-astro-prefetch>
+      <Button className="h-10 px-6">Back to home</Button>
+    </a>
+  </section>
+</Layout>
+
+<style>
+  .error-glow,
+  .error-code {
+    font-size: clamp(120px, 25vw, 220px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: linear-gradient(
+      to bottom,
+      var(--color-brand-top),
+      var(--color-brand-bottom)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .error-glow {
+    position: absolute;
+    inset: 0;
+    filter: blur(5px);
+    opacity: 0.5;
+  }
+
+  .error-code {
+    position: relative;
+  }
+</style>
